@@ -1,4 +1,4 @@
-Grading at Sun Aug 11 19:31:09 UTC 2019
+Grading at Sun Aug 11 19:33:54 UTC 2019
 Compiling cards.c
 Testing card_from_letters
 Passed
@@ -7,59 +7,17 @@ Passed
 Testing print_card
 Passed
 Testing card_from_num
-When I use card_from_num on numbers 0<= i < 52
-I expect to see each card exactly once, but I see:
-1s
-2s
-3s
-4s
-5s
-6s
-7s
-8s
-9s
-0s
-Js
-Qs
-Ks
-1h
-2h
-3h
-4h
-5h
-6h
-7h
-8h
-9h
-0h
-Jh
-Qh
-Kh
-1d
-2d
-3d
-4d
-5d
-6d
-7d
-8d
-9d
-0d
-Jd
-Qd
-Kd
-1c
-2c
-3c
-4c
-5c
-6c
-7c
-8c
-9c
-0c
-Jc
-Qc
-Kc
+Passed
+Testing ranking_to_string
+ranking_to_string(STRAIGHT_FLUSH) resulted in straight flush (Incorrect)
+ranking_to_string(FOUR_OF_A_KIND) resulted in four of kind (Incorrect)
+ranking_to_string(FULL_HOUSE) resulted in full house (Incorrect)
+ranking_to_string(FLUSH) resulted in flush (Incorrect)
+ranking_to_string(STRAIGHT) resulted in straight (Incorrect)
+ranking_to_string(THREE_OF_A_KIND) resulted in three of kind (Incorrect)
+ranking_to_string(TWO_PAIR) resulted in two pair (Incorrect)
+ranking_to_string(PAIR) resulted in pair (Incorrect)
+ranking_to_string(NOTHING) resulted in nothning (Incorrect)
+Failed
 
 Overall Grade: FAILED
