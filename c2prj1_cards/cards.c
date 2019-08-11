@@ -89,7 +89,7 @@ card_t card_from_letters(char value_let, char suit_let) {
     return temp;
 }
 
-card_t card_fruom_num(unsigned c) {
+card_t card_from_num(unsigned c) {
     card_t temp;
     temp.suit = c / 13;
     temp.value = (c % 13) + 1; 
