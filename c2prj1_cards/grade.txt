@@ -1,0 +1,8 @@
+Grading at Sun Aug 11 19:28:13 UTC 2019
+Compiling cards.c
+tester.o: In function `check_card_from_num':
+tester.c:(.text+0x4b3): undefined reference to `card_from_num'
+collect2: error: ld returned 1 exit status
+Could not compile your card.c!
+
+Overall Grade: FAILED
