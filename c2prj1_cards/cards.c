@@ -18,7 +18,7 @@ const char * ranking_to_string(hand_ranking_t r) {
         case(STRAIGHT_FLUSH): return "Straight flush"; break;
         case(FOUR_OF_A_KIND): return "four of kind"; break;
         case(FULL_HOUSE): return "full house"; break;
-        case(FLUSH): return "flush"; break;
+        case(FLUSH): return "FLUSH"; break;
         case(STRAIGHT): return "straight"; break;
         case(THREE_OF_A_KIND): return "three of kind"; break;
         case(TWO_PAIR): return "two pair"; break;
