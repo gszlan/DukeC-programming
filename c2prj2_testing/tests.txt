@@ -13,3 +13,4 @@ Ac 0c 0h 2c 2d 0c 9c; Kc Ks 7s 7h 5h 9s 7c
 Kh Ks Kd Qc As 4h 8s; Ah Ac Ad 0s 0h 4d 2c
 5s 0d 0h 0c 2c 8c As; Kc Jc 0s 7c 5h 9c Ac
 2h Qs 4c 5s 6h 7h 8s; Ah Ac 5c 9s Jh 5d Ad
+2h Qs 4c 5s 6h 7h 8s; Ah Ac 5c 9s Jh 5d Ad
