@@ -1,13 +1,77 @@
-Grading at Wed Sep 11 21:05:07 UTC 2019
+Grading at Wed Sep 11 21:13:24 UTC 2019
 **Testing broken implementation 10 **
 -------------------------------------
 
+Failed on test: 1
+
+**Testing broken implementation 11 **
+-------------------------------------
+
+Failed on test: 1
+
+**Testing broken implementation 1 **
+-------------------------------------
+
+PAssed test: 1
+PAssed test: 2
+PAssed test: 3
+PAssed test: 4
+Failed on test: 5
+
+**Testing broken implementation 2 **
+-------------------------------------
+
+Failed on test: 1
+
+**Testing broken implementation 3 **
+-------------------------------------
+
+Failed on test: 1
+
+**Testing broken implementation 4 **
+-------------------------------------
+
+PAssed test: 1
+Failed on test: 2
+
+**Testing broken implementation 5 **
+-------------------------------------
+
+Failed on test: 1
+
+**Testing broken implementation 6 **
+-------------------------------------
+
+PAssed test: 1
+PAssed test: 2
+Failed on test: 3
+
+**Testing broken implementation 7 **
+-------------------------------------
+
+Failed on test: 1
+
+**Testing broken implementation 8 **
+-------------------------------------
+
+Failed on test: 1
+
+**Testing broken implementation 9 **
+-------------------------------------
+
+Failed on test: 1
+
+**Testing correct implementation **
+-------------------------------------
+
+PAssed test: 1
 PAssed test: 2
 PAssed test: 3
 PAssed test: 4
 PAssed test: 5
 PAssed test: 6
 PAssed test: 7
-Your test program did not identify /usr/local/l2p/subseq/subseq10.o as broken!
 
-Overall Grade: FAILED
+All test programs were handled correctly
+
+Overall Grade: PASSED
