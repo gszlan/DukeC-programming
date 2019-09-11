@@ -24,7 +24,7 @@ void doTesting(int * array, size_t n, size_t result, int testCase) {
     int arr6[] = {4,3,1};
     int arr7[] = {-3,-2,-1};
 
-//    doTesting(arr1,16,8,1);
+    doTesting(arr1,16,8,1);
     doTesting(arr2,0,0,2); 
     doTesting(arr3,1,1,3); 
     doTesting(arr4,3,3,4); 
