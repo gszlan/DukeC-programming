@@ -1,0 +1,15 @@
+Grading at Sun Sep 15 18:59:14 UTC 2019
+Attempting to compile test.c
+gcc -o test test.c
+compiled
+I expected to find a file called 'answer.txt' but it did not exist
+(or was not a regular file)
+Here are the files that I can find:
+answer
+Makefile
+README
+test
+test.c
+Your output did not match what we expected.
+
+Overall Grade: F
