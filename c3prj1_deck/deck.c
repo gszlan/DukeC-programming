@@ -6,9 +6,8 @@ void print_hand(deck_t * hand){
 
     for(int i = 0; i < hand->n_cards; i++) {
         print_card(*(hand->cards[i]));
-        printf(",");
+        printf(" ");
     }
-    printf("\n");
 }
 
 int deck_contains(deck_t * d, card_t c) {
