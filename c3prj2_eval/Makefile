@@ -2,6 +2,13 @@ CFLAGS=-ggdb3 -Wall -Werror -pedantic -std=gnu99
 GIVEN_OBJS=deck-c4.o  eval-c4.o  future.o  input.o  main.o
 MY_OBJS=cards.o deck.o eval.o
 
+
+mytest: deck.o eval.o eval-c4.o mytest.o deck-c4.o cards.o input.o future.o
+	gcc -o mytest -ggdb3 deck.o deck-c4.o eval-c4.o eval.o mytest.o cards.o input.o future.o
+
+mytest.o: mytest.c
+	gcc -c mytest.c
+
 test-eval: deck.o eval.o eval-c4.o test-eval.o deck-c4.o cards.o input.o future.o
 	gcc -o test-eval -ggdb3 deck.o deck-c4.o eval-c4.o eval.o test-eval.o cards.o input.o future.o
 poker: $(GIVEN_OBJS) $(MY_OBJS)
