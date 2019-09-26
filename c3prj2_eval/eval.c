@@ -205,16 +205,16 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
       if (eval_hand1.ranking == STRAIGHT) i++;
       
       for(; i < 5 ; i++) {
-            if (hand1->cards[i]->value == hand2->cards[i]->value) {
+            if (eval_hand1.cards[i]->value == eval_hand2.cards[i]->value) {
                 printf("karty %i rowne\n",i);
                 continue;
             }
             else {
-                printf("karty %i sa rozne %i vs %i\n",i,hand1->cards[i]->value, hand2->cards[i]->value);
-                return hand1->cards[i]->value - hand2->cards[i]->value;
+                printf("karty %i sa rozne %i vs %i\n",i,eval_hand1.cards[i]->value, eval_hand2.cards[i]->value);
+                return eval_hand1.cards[i]->value - eval_hand2.cards[i]->value;
             }
         }
-        return hand2->cards[4]->suit - hand1->cards[4]->suit;
+        return eval_hand2.cards[4]->suit - eval_hand1.cards[4]->suit;
   }
   // rankings are not equals
   else {
