@@ -193,8 +193,10 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
   hand_eval_t eval_hand1 = evaluate_hand(hand1);
   hand_eval_t eval_hand2 = evaluate_hand(hand2);
 
-  deck_t my_deck = {eval_hand1.cards, 5};
+  deck_t my_deck = {eval_hand1.cards, 6};
+  deck_t my_deck2= {eval_hand2.cards, 6};
   printf("\nhand1: "); print_hand(&my_deck);printf("\n");
+  printf("\nhand2: "); print_hand(&my_deck2);printf("\n");
   if (eval_hand1.ranking == eval_hand2.ranking) {
   
   // for staights do not compare first card 
@@ -202,12 +204,12 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
   int i = 0;
   if (eval_hand1.ranking == STRAIGHT) i++;
   
-  for(; i < hand1->n_cards; i++) {
+  for(; i < 5 ; i++) {
         if (hand1->cards[i]->value == hand2->cards[i]->value)
             continue;
         else return hand1->cards[i]->value - hand2->cards[i]->value;
     }
-    return hand2->cards[hand2->n_cards-1]->suit - hand1->cards[hand1->n_cards - 1]->suit;
+    return hand2->cards[4]->suit - hand1->cards[4]->suit;
   }
   // rankings are not equals
   else {
