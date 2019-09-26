@@ -194,13 +194,21 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
   hand_eval_t eval_hand2 = evaluate_hand(hand2);
 
   if (eval_hand1.ranking == eval_hand2.ranking) {
-    for(int i = 0; i < 5; i++) {
+  
+  // for staights do not compare first card 
+  // to handle A-low straight
+  int i = 0;
+  if (eval_hand1.ranking == STRAIGHT) i++;
+  
+  for(; i < 5; i++) {
         if (hand1->cards[i]->value == hand2->cards[i]->value)
             continue;
         else return hand1->cards[i]->value - hand2->cards[i]->value;
     }
     return hand2->cards[4]->suit - hand1->cards[4]->suit;
-  } else {
+  }
+  // rankings are not equals
+  else {
       return eval_hand2.ranking - eval_hand1.ranking;
   }
 }
