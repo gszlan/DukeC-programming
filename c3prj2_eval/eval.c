@@ -5,19 +5,14 @@
 
 int card_ptr_comp(const void * vp1, const void * vp2) {
 
-  const card_t * const c1 = (card_t *) vp1;
-  const card_t * const c2 = (card_t *) vp2;
+  const card_t * const * c1 =  ( card_t const **) vp1;
+  const card_t * const * c2 =  ( card_t const **) vp2;
 
-  printf("\n porownuje karty: %u z %u ",c1->value, c2->value);
-  print_card(*c1); printf(",");
-  print_card(*c2);
-//  if (c1->value == c2->value) {
-//      return c1->suit - c2->suit;
-//      printf("wartosci rowne\n");
-//  }  else {
-      return (c2->value - c1->value);
-//  }
-
+  if ((*c1)->value == (*c2)->value) {
+      return (*c1)->suit - (*c2)->suit;
+  }  else {
+      return ((*c2)->value - (*c1)->value);
+  }
 
 }
 
@@ -60,11 +55,21 @@ size_t  find_secondary_pair(deck_t * hand,
 			     size_t match_idx) {
   
   size_t card_value;
+//  printf("\nkarta z pierwszej pary: ");
+//  print_card(*(hand->cards[match_idx]));
 
   for (int i = 0; i < hand->n_cards; i++) {
       card_value = hand->cards[i]->value;
-      if ( card_value  == hand->cards[match_idx]->value) continue;
-      if (match_counts[card_value] > 1) return i;
+//      printf("\nSprawdzam karte: ");
+//      print_card(*(hand->cards[i]));
+      if ( card_value  == hand->cards[match_idx]->value) {
+//          printf(" pomijam \n");
+          continue;
+      }
+      if (match_counts[i] > 1) {
+ //         printf(" znalazlem !!!\n");
+          return i;
+      }
   }
 
   return -1;
@@ -80,6 +85,24 @@ int is_suit_matched(card_t c, suit_t fs) {
 
 }
 
+size_t find_index_for_card_value(deck_t * hand, size_t index, int value) {
+
+    for (; index < hand->n_cards; index++) {
+        if (hand->cards[index]->value == value)
+            return index;
+    }
+    return 0;
+}
+
+int is_1_length_straight_at(deck_t * hand, size_t index, suit_t fs) {
+
+  for (; index < hand->n_cards; index++) {
+    if (hand->cards[index]->value != VALUE_ACE) return 0;
+    if (is_suit_matched(*(hand->cards[index]), fs) == 1) return -1;
+  }
+  return 0;
+}
+
 int is_n_length_straight_at(deck_t * hand, size_t index, suit_t fs, int n) {
 
   // check whether we have enough cards for n_straight
@@ -87,61 +110,59 @@ int is_n_length_straight_at(deck_t * hand, size_t index, suit_t fs, int n) {
   if (hand_size - index < n) return 0;
 
   int straight_found = 0;
-  int value_found = 0;
   int suit_found = is_suit_matched(*(hand->cards[index]), fs);
 
-  suit_t current_suit;
   unsigned previous_value;
   unsigned current_value = hand->cards[index]->value;
-  // if n = 1 looking for Ace as part of Ace-low straight
-  if ( n == 1) {
-      if (current_value != VALUE_ACE) return 0;
-      else if (suit_found) return -1;
-  }
-  value_found = 1;
   index++;
 
-  if(value_found && suit_found) {
+  if(suit_found) {
       straight_found++;
-      value_found = 0;
       suit_found = 0;
   }
-
+  
   // main loop
-  for (int i = index ; i < hand_size && straight_found < n; i++) {
+  for (; index < hand_size && straight_found < n; index++) {
     previous_value = current_value;
-    current_value = hand->cards[i]->value;
-    current_suit = hand->cards[i]->suit;
-   
-    if (previous_value - current_value > 1) return 0;
-
-    // if value is the same try to find suit if still not found
-    if (current_value == previous_value) {
-        if (!suit_found)
-            suit_found = (current_suit == fs) ? 1 : 0;
-    }
-
-    if(value_found && suit_found) {
-        if (n == 1) return -1;
+    current_value = hand->cards[index]->value;
+    if (!suit_found)
+       suit_found = is_suit_matched(*(hand->cards[index]), fs);
+    if (previous_value - current_value > 1)  return 0;
+    if (current_value == previous_value)  continue;
+ 
+    if(suit_found) {
         straight_found++;
-        value_found = 0;
         suit_found = 0;
     }
   }
-
-  return (straight_found >= n ? 1 : 0);
-
+ 
+  // check what we have found
+  if (straight_found == 5 && n == 5)  return 1;
+  else 
+      if (straight_found == 4 && n == 4) {
+          if (current_value == 2) return -1;
+          else return 0;
+      }
+  else
+    return 0;
 }
 
 int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
 
-  if ((is_n_length_straight_at(hand, index, fs, 4) == 1) && (is_n_length_straight_at(hand, 0, fs, 1) == -1))
-      return -1;
-
-  return is_n_length_straight_at(hand, index, fs, 5);
-
+  int try_n_5 = is_n_length_straight_at(hand, index, fs, 5);
+  if (try_n_5 != 0 ) return try_n_5;
+  else { 
+  // chech for A-low straight
+      if (is_1_length_straight_at(hand, index, fs) == -1) {
+          int i = find_index_for_card_value(hand, index, 5);
+          if (i < index)
+              return 0;
+          else
+              return is_n_length_straight_at(hand, i, fs, 4);
+      }
+  }
+  return 0;
 }
-
 
 
 hand_eval_t build_hand_from_match(deck_t * hand,
