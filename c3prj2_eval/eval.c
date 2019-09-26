@@ -9,7 +9,7 @@ int card_ptr_comp(const void * vp1, const void * vp2) {
   const card_t * const * c2 =  ( card_t const **) vp2;
 
   if ((*c1)->value == (*c2)->value) {
-      return (*c1)->suit - (*c2)->suit;
+      return (*c2)->suit - (*c1)->suit;
   }  else {
       return ((*c2)->value - (*c1)->value);
   }
