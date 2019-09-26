@@ -193,8 +193,8 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
   hand_eval_t eval_hand1 = evaluate_hand(hand1);
   hand_eval_t eval_hand2 = evaluate_hand(hand2);
 
-  deck_t my_deck = {eval_hand1.cards, 6};
-  deck_t my_deck2= {eval_hand2.cards, 6};
+  deck_t my_deck = {eval_hand1.cards, 5};
+  deck_t my_deck2= {eval_hand2.cards, 5};
   printf("\nhand1: "); print_hand(&my_deck);printf("\n");
   printf("\nhand2: "); print_hand(&my_deck2);printf("\n");
   if (eval_hand1.ranking == eval_hand2.ranking) {
