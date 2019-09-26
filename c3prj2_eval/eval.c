@@ -55,19 +55,13 @@ size_t  find_secondary_pair(deck_t * hand,
 			     size_t match_idx) {
   
   size_t card_value;
-//  printf("\nkarta z pierwszej pary: ");
-//  print_card(*(hand->cards[match_idx]));
 
   for (int i = 0; i < hand->n_cards; i++) {
       card_value = hand->cards[i]->value;
-//      printf("\nSprawdzam karte: ");
-//      print_card(*(hand->cards[i]));
       if ( card_value  == hand->cards[match_idx]->value) {
-//          printf(" pomijam \n");
           continue;
       }
       if (match_counts[i] > 1) {
- //         printf(" znalazlem !!!\n");
           return i;
       }
   }
@@ -195,9 +189,6 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
 
   qsort(hand1->cards, hand1->n_cards, sizeof(card_t *), card_ptr_comp); 
   qsort(hand2->cards, hand2->n_cards, sizeof(card_t *), card_ptr_comp);
-
-  print_hand(hand1);
-  print_hand(hand2);
 
   hand_eval_t eval_hand1 = evaluate_hand(hand1);
   hand_eval_t eval_hand2 = evaluate_hand(hand2);
