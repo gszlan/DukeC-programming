@@ -210,7 +210,7 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
                 continue;
             }
             else {
-                printf("karty %i sa rozne\n",i);
+                printf("karty %i sa rozne %i vs %i\n",i,hand1->cards[i]->value, hand2->cards[i]->value);
                 return hand1->cards[i]->value - hand2->cards[i]->value;
             }
         }
