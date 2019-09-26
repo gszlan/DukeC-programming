@@ -174,7 +174,7 @@ hand_eval_t build_hand_from_match(deck_t * hand,
  
   size_t pos = 0;
   // fill left with highest value cards
-  for(int i = n; i <= 5; i++) {
+  for(int i = n; i < 5; i++) {
       if (idx == 0) pos += n;
       ans.cards[i] = hand->cards[pos];
       pos++;
