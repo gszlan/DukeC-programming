@@ -193,6 +193,7 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
   hand_eval_t eval_hand1 = evaluate_hand(hand1);
   hand_eval_t eval_hand2 = evaluate_hand(hand2);
 
+  return 0;
   if (eval_hand1.ranking == eval_hand2.ranking) {
   
   // for staights do not compare first card 
