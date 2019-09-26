@@ -1,4 +1,4 @@
-Grading at Thu Sep 26 21:46:03 UTC 2019
+Grading at Thu Sep 26 21:51:07 UTC 2019
 Compiling your code
 rm -f test poker cards.o my-test-main.o *~
 cc -ggdb3 -Wall -Werror -pedantic -std=gnu99   -c -o deck.o deck.c
@@ -204,8 +204,8 @@ Line_74_did_not_match
 Line_75_did_not_match
 Line_76_did_not_match
 Line_77_did_not_match
-Line_78_did_not_match
-Line_79_did_not_match
+Line_98_did_not_match
+Line_99_did_not_match
 Line_100_did_not_match
 Line_101_did_not_match
 Line_102_did_not_match
@@ -214,8 +214,6 @@ Line_104_did_not_match
 Line_105_did_not_match
 Line_106_did_not_match
 Line_107_did_not_match
-Line_108_did_not_match
-Line_111_did_not_match
 Your file did not match the expected ouput
  - Output did not match, testcase failed
 Hand 1:								Hand 1:
@@ -294,9 +292,7 @@ As Kh Qc Qd 9d 5c 						As Kh Qc Qd 9d 5c
 							      >
 							      >	hand2: Qc Qd As Kh 9d 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 rowne
-							      >	karty 1 rowne
-							      >	karty 2 sa rozne 13 vs 12
+							      >	karty 0 sa rozne 13 vs 12
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -325,10 +321,11 @@ Jd 9h 7c 6h 5h 5s 						Jd 9h 7c 6h 5h 5s
 							      >	karty 0 rowne
 							      >	karty 1 rowne
 							      >	karty 2 rowne
-							      >	karty 3 sa rozne 5 vs 6
+							      >	karty 3 rowne
+							      >	karty 4 rowne
 Comparison : 							Comparison : 
 --------------							--------------
-Tie							      |	Hand 2 wins!
+Tie								Tie
 ============================					============================
 Testcase 3: Trying hands with 2 pairs
  Checking the output 
@@ -368,15 +365,14 @@ Line_129_did_not_match
 Line_130_did_not_match
 Line_131_did_not_match
 Line_132_did_not_match
-Line_135_did_not_match
-Line_153_did_not_match
-Line_154_did_not_match
+Line_133_did_not_match
+Line_134_did_not_match
 Line_155_did_not_match
 Line_156_did_not_match
 Line_157_did_not_match
 Line_158_did_not_match
-Line_179_did_not_match
-Line_180_did_not_match
+Line_159_did_not_match
+Line_160_did_not_match
 Line_181_did_not_match
 Line_182_did_not_match
 Line_183_did_not_match
@@ -384,13 +380,13 @@ Line_184_did_not_match
 Line_185_did_not_match
 Line_186_did_not_match
 Line_187_did_not_match
-Line_208_did_not_match
+Line_188_did_not_match
 Line_209_did_not_match
 Line_210_did_not_match
 Line_211_did_not_match
 Line_212_did_not_match
 Line_213_did_not_match
-Line_234_did_not_match
+Line_214_did_not_match
 Line_235_did_not_match
 Line_236_did_not_match
 Line_237_did_not_match
@@ -398,12 +394,15 @@ Line_238_did_not_match
 Line_239_did_not_match
 Line_240_did_not_match
 Line_241_did_not_match
-Line_262_did_not_match
-Line_263_did_not_match
-Line_264_did_not_match
+Line_242_did_not_match
+Line_243_did_not_match
+Line_244_did_not_match
 Line_265_did_not_match
 Line_266_did_not_match
 Line_267_did_not_match
+Line_268_did_not_match
+Line_269_did_not_match
+Line_270_did_not_match
 Your file did not match the expected ouput
  - Output did not match, testcase failed
 Hand 1:								Hand 1:
@@ -537,10 +536,12 @@ Qs 7d 7s 5c 2d 2h 						Qs 7d 7s 5c 2d 2h
 							      >
 							      >	hand2: 7d 7s 2d 2h Qs 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne 11 vs 12
+							      >	karty 0 rowne
+							      >	karty 1 rowne
+							      >	karty 2 sa rozne 3 vs 2
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -563,7 +564,7 @@ Qs 8d 8s 5c 2d 2h 						Qs 8d 8s 5c 2d 2h
 							      >
 							      >	hand2: 8d 8s 2d 2h Qs 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne 11 vs 12
+							      >	karty 0 sa rozne 7 vs 8
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -591,8 +592,7 @@ Jc Js 9d 4c 4s 3h 						Jc Js 9d 4c 4s 3h
 							      >	sprawdzam rowne rankingi 
 							      >	karty 0 rowne
 							      >	karty 1 rowne
-							      >	karty 2 rowne
-							      >	karty 3 sa rozne 5 vs 4
+							      >	karty 2 sa rozne 5 vs 4
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -646,7 +646,9 @@ Jc Js 8d 5c 5s 3h 						Jc Js 8d 5c 5s 3h
 							      >	sprawdzam rowne rankingi 
 							      >	karty 0 rowne
 							      >	karty 1 rowne
-							      >	karty 2 sa rozne 9 vs 8
+							      >	karty 2 rowne
+							      >	karty 3 rowne
+							      >	karty 4 sa rozne 9 vs 8
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -720,7 +722,7 @@ Line_134_did_not_match
 Line_135_did_not_match
 Line_136_did_not_match
 Line_137_did_not_match
-Line_138_did_not_match
+Line_158_did_not_match
 Line_159_did_not_match
 Line_160_did_not_match
 Line_161_did_not_match
@@ -728,6 +730,8 @@ Line_162_did_not_match
 Line_163_did_not_match
 Line_164_did_not_match
 Line_165_did_not_match
+Line_166_did_not_match
+Line_167_did_not_match
 Your file did not match the expected ouput
  - Output did not match, testcase failed
 Hand 1:								Hand 1:
@@ -866,8 +870,7 @@ As Qc Jc Jd Jh 7c 						As Qc Jc Jd Jh 7c
 							      >
 							      >	hand2: Jc Jd Jh As Qc 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 rowne
-							      >	karty 1 sa rozne 13 vs 12
+							      >	karty 0 sa rozne 12 vs 11
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -894,7 +897,10 @@ As Qc Jc Jd Jh 7c 						As Qc Jc Jd Jh 7c
 							      >	hand2: Jc Jd Jh As Qc 
 							      >	sprawdzam rowne rankingi 
 							      >	karty 0 rowne
-							      >	karty 1 sa rozne 13 vs 12
+							      >	karty 1 rowne
+							      >	karty 2 rowne
+							      >	karty 3 rowne
+							      >	karty 4 sa rozne 13 vs 12
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -913,38 +919,33 @@ Line_49_did_not_match
 Line_50_did_not_match
 Line_51_did_not_match
 Line_52_did_not_match
-Line_53_did_not_match
-Line_54_did_not_match
-Line_55_did_not_match
+Line_76_did_not_match
+Line_77_did_not_match
+Line_78_did_not_match
 Line_79_did_not_match
 Line_80_did_not_match
 Line_81_did_not_match
-Line_82_did_not_match
-Line_83_did_not_match
-Line_84_did_not_match
-Line_85_did_not_match
+Line_104_did_not_match
+Line_105_did_not_match
+Line_106_did_not_match
+Line_107_did_not_match
 Line_108_did_not_match
 Line_109_did_not_match
-Line_110_did_not_match
-Line_111_did_not_match
-Line_112_did_not_match
-Line_113_did_not_match
-Line_116_did_not_match
+Line_132_did_not_match
+Line_133_did_not_match
+Line_134_did_not_match
+Line_135_did_not_match
 Line_136_did_not_match
 Line_137_did_not_match
-Line_138_did_not_match
-Line_139_did_not_match
-Line_140_did_not_match
-Line_141_did_not_match
+Line_162_did_not_match
+Line_163_did_not_match
+Line_164_did_not_match
+Line_165_did_not_match
 Line_166_did_not_match
 Line_167_did_not_match
 Line_168_did_not_match
 Line_169_did_not_match
 Line_170_did_not_match
-Line_171_did_not_match
-Line_172_did_not_match
-Line_173_did_not_match
-Line_174_did_not_match
 Your file did not match the expected ouput
  - Output did not match, testcase failed
 Hand 1:								Hand 1:
@@ -998,10 +999,7 @@ Hand 2:								Hand 2:
 							      >
 							      >	hand2: 6c 5h 4s 3s 2d 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 1 rowne
-							      >	karty 2 rowne
-							      >	karty 3 rowne
-							      >	karty 4 rowne
+							      >	karty 1 sa rozne 4 vs 5
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -1030,8 +1028,7 @@ Kc Qh Qs Jd Js 0c 0s 9d 					Kc Qh Qs Jd Js 0c 0s 9d
 							      >
 							      >	hand2: Kc Qh Jd 0c 9d 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 1 rowne
-							      >	karty 2 sa rozne 11 vs 12
+							      >	karty 1 sa rozne 11 vs 12
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -1059,10 +1056,10 @@ Kc Qh 8c 7h 6c 5d 4s 						Kc Qh 8c 7h 6c 5d 4s
 							      >
 							      >	hand2: 8c 7h 6c 5d 4s 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 1 sa rozne 11 vs 12
+							      >	karty 1 sa rozne 8 vs 7
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1087,7 +1084,7 @@ Ac 5s 4c 3s 2s 							Ac 5s 4c 3s 2s
 							      >
 							      >	hand2: 5s 4c 3s 2s Ac 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 1 sa rozne 13 vs 5
+							      >	karty 1 sa rozne 13 vs 4
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -1134,16 +1131,15 @@ Line_22_did_not_match
 Line_23_did_not_match
 Line_24_did_not_match
 Line_25_did_not_match
-Line_26_did_not_match
-Line_27_did_not_match
-Line_28_did_not_match
-Line_31_did_not_match
+Line_46_did_not_match
+Line_47_did_not_match
+Line_48_did_not_match
 Line_49_did_not_match
 Line_50_did_not_match
 Line_51_did_not_match
-Line_52_did_not_match
-Line_53_did_not_match
-Line_54_did_not_match
+Line_72_did_not_match
+Line_73_did_not_match
+Line_74_did_not_match
 Line_75_did_not_match
 Line_76_did_not_match
 Line_77_did_not_match
@@ -1151,70 +1147,69 @@ Line_78_did_not_match
 Line_79_did_not_match
 Line_80_did_not_match
 Line_81_did_not_match
-Line_82_did_not_match
-Line_83_did_not_match
-Line_84_did_not_match
-Line_87_did_not_match
+Line_102_did_not_match
+Line_103_did_not_match
+Line_104_did_not_match
 Line_105_did_not_match
 Line_106_did_not_match
 Line_107_did_not_match
-Line_108_did_not_match
-Line_109_did_not_match
-Line_110_did_not_match
+Line_128_did_not_match
+Line_129_did_not_match
+Line_130_did_not_match
 Line_131_did_not_match
 Line_132_did_not_match
 Line_133_did_not_match
-Line_134_did_not_match
-Line_135_did_not_match
-Line_136_did_not_match
+Line_154_did_not_match
+Line_155_did_not_match
+Line_156_did_not_match
 Line_157_did_not_match
 Line_158_did_not_match
 Line_159_did_not_match
 Line_160_did_not_match
-Line_161_did_not_match
-Line_162_did_not_match
-Line_163_did_not_match
+Line_181_did_not_match
+Line_182_did_not_match
+Line_183_did_not_match
 Line_184_did_not_match
 Line_185_did_not_match
 Line_186_did_not_match
 Line_187_did_not_match
-Line_188_did_not_match
-Line_189_did_not_match
-Line_190_did_not_match
+Line_208_did_not_match
+Line_209_did_not_match
+Line_210_did_not_match
 Line_211_did_not_match
 Line_212_did_not_match
 Line_213_did_not_match
 Line_214_did_not_match
 Line_215_did_not_match
-Line_216_did_not_match
-Line_217_did_not_match
-Line_218_did_not_match
+Line_236_did_not_match
+Line_237_did_not_match
+Line_238_did_not_match
 Line_239_did_not_match
 Line_240_did_not_match
 Line_241_did_not_match
 Line_242_did_not_match
 Line_243_did_not_match
-Line_244_did_not_match
-Line_245_did_not_match
-Line_246_did_not_match
+Line_264_did_not_match
+Line_265_did_not_match
+Line_266_did_not_match
 Line_267_did_not_match
 Line_268_did_not_match
 Line_269_did_not_match
 Line_270_did_not_match
 Line_271_did_not_match
 Line_272_did_not_match
-Line_273_did_not_match
-Line_274_did_not_match
-Line_275_did_not_match
+Line_293_did_not_match
+Line_294_did_not_match
+Line_295_did_not_match
 Line_296_did_not_match
 Line_297_did_not_match
 Line_298_did_not_match
 Line_299_did_not_match
 Line_300_did_not_match
 Line_301_did_not_match
-Line_302_did_not_match
-Line_303_did_not_match
-Line_304_did_not_match
+Line_322_did_not_match
+Line_323_did_not_match
+Line_324_did_not_match
 Line_325_did_not_match
 Line_326_did_not_match
 Line_327_did_not_match
@@ -1222,9 +1217,9 @@ Line_328_did_not_match
 Line_329_did_not_match
 Line_330_did_not_match
 Line_331_did_not_match
-Line_332_did_not_match
-Line_333_did_not_match
-Line_334_did_not_match
+Line_352_did_not_match
+Line_353_did_not_match
+Line_354_did_not_match
 Line_355_did_not_match
 Line_356_did_not_match
 Line_357_did_not_match
@@ -1232,9 +1227,9 @@ Line_358_did_not_match
 Line_359_did_not_match
 Line_360_did_not_match
 Line_361_did_not_match
-Line_362_did_not_match
-Line_363_did_not_match
-Line_364_did_not_match
+Line_382_did_not_match
+Line_383_did_not_match
+Line_384_did_not_match
 Line_385_did_not_match
 Line_386_did_not_match
 Line_387_did_not_match
@@ -1242,9 +1237,9 @@ Line_388_did_not_match
 Line_389_did_not_match
 Line_390_did_not_match
 Line_391_did_not_match
-Line_392_did_not_match
-Line_393_did_not_match
-Line_394_did_not_match
+Line_412_did_not_match
+Line_413_did_not_match
+Line_414_did_not_match
 Line_415_did_not_match
 Line_416_did_not_match
 Line_417_did_not_match
@@ -1252,9 +1247,6 @@ Line_418_did_not_match
 Line_419_did_not_match
 Line_420_did_not_match
 Line_421_did_not_match
-Line_422_did_not_match
-Line_423_did_not_match
-Line_424_did_not_match
 Your file did not match the expected ouput
  - Output did not match, testcase failed
 Hand 1:								Hand 1:
@@ -1281,13 +1273,10 @@ As Ks Qc Js 0s 3s 						As Ks Qc Js 0s 3s
 							      >	hand2: As Ks Js 0s 3s 
 							      >	sprawdzam rowne rankingi 
 							      >	karty 0 rowne
-							      >	karty 1 rowne
-							      >	karty 2 rowne
-							      >	karty 3 rowne
-							      >	karty 4 rowne
+							      >	karty 1 sa rozne 12 vs 13
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Tie
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1340,10 +1329,10 @@ Kc Jc 9c 7h 4c 3h 2c 						Kc Jc 9c 7h 4c 3h 2c
 							      >	karty 1 rowne
 							      >	karty 2 rowne
 							      >	karty 3 rowne
-							      >	karty 4 rowne
+							      >	karty 4 sa rozne 3 vs 2
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Tie
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1696,32 +1685,31 @@ Line_22_did_not_match
 Line_23_did_not_match
 Line_24_did_not_match
 Line_25_did_not_match
-Line_28_did_not_match
-Line_46_did_not_match
+Line_26_did_not_match
 Line_47_did_not_match
 Line_48_did_not_match
 Line_49_did_not_match
 Line_50_did_not_match
 Line_51_did_not_match
-Line_72_did_not_match
+Line_52_did_not_match
 Line_73_did_not_match
 Line_74_did_not_match
 Line_75_did_not_match
 Line_76_did_not_match
 Line_77_did_not_match
-Line_98_did_not_match
+Line_78_did_not_match
 Line_99_did_not_match
 Line_100_did_not_match
 Line_101_did_not_match
 Line_102_did_not_match
 Line_103_did_not_match
-Line_124_did_not_match
+Line_104_did_not_match
 Line_125_did_not_match
 Line_126_did_not_match
 Line_127_did_not_match
 Line_128_did_not_match
 Line_129_did_not_match
-Line_150_did_not_match
+Line_130_did_not_match
 Line_151_did_not_match
 Line_152_did_not_match
 Line_153_did_not_match
@@ -1734,22 +1722,21 @@ Line_179_did_not_match
 Line_180_did_not_match
 Line_181_did_not_match
 Line_182_did_not_match
-Line_183_did_not_match
+Line_203_did_not_match
 Line_204_did_not_match
 Line_205_did_not_match
 Line_206_did_not_match
 Line_207_did_not_match
 Line_208_did_not_match
-Line_209_did_not_match
-Line_210_did_not_match
-Line_211_did_not_match
-Line_214_did_not_match
+Line_229_did_not_match
+Line_230_did_not_match
+Line_231_did_not_match
 Line_232_did_not_match
 Line_233_did_not_match
 Line_234_did_not_match
-Line_235_did_not_match
-Line_236_did_not_match
-Line_237_did_not_match
+Line_255_did_not_match
+Line_256_did_not_match
+Line_257_did_not_match
 Line_258_did_not_match
 Line_259_did_not_match
 Line_260_did_not_match
@@ -1782,10 +1769,11 @@ Kd Kh Ks 9h 7c 7h 2h 						Kd Kh Ks 9h 7c 7h 2h
 							      >	karty 0 rowne
 							      >	karty 1 rowne
 							      >	karty 2 rowne
-							      >	karty 3 sa rozne 8 vs 9
+							      >	karty 3 rowne
+							      >	karty 4 rowne
 Comparison : 							Comparison : 
 --------------							--------------
-Tie							      |	Hand 2 wins!
+Tie								Tie
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1912,8 +1900,7 @@ Ad Ah As 8c 8d 8h 						Ad Ah As 8c 8d 8h
 							      >
 							      >	hand2: Ad Ah As 8c 8d 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 rowne
-							      >	karty 1 sa rozne 13 vs 14
+							      >	karty 0 sa rozne 13 vs 14
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -1939,8 +1926,7 @@ Ad Ah As 6c 6d 6h 						Ad Ah As 6c 6d 6h
 							      >
 							      >	hand2: Ad Ah As 6c 6d 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 rowne
-							      >	karty 1 sa rozne 13 vs 14
+							      >	karty 0 sa rozne 13 vs 14
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -1966,12 +1952,10 @@ Kh Ks 9d 3c 3h 3s 2c 						Kh Ks 9d 3c 3h 3s 2c
 							      >
 							      >	hand2: 3c 3h 3s Kh Ks 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 rowne
-							      >	karty 1 rowne
-							      >	karty 2 sa rozne 8 vs 9
+							      >	karty 0 sa rozne 7 vs 3
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!						      |	Hand 2 wins!
+Hand 1 wins!							Hand 1 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -1994,7 +1978,7 @@ Qh Qs 9d 3c 3h 3s 2c 						Qh Qs 9d 3c 3h 3s 2c
 							      >
 							      >	hand2: 3c 3h 3s Qh Qs 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne 13 vs 12
+							      >	karty 0 sa rozne 7 vs 3
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -2020,7 +2004,10 @@ Jh Js 9d 7c 7h 7s 2c 						Jh Js 9d 7c 7h 7s 2c
 							      >
 							      >	hand2: 7c 7h 7s Jh Js 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne 13 vs 11
+							      >	karty 0 rowne
+							      >	karty 1 rowne
+							      >	karty 2 rowne
+							      >	karty 3 sa rozne 13 vs 11
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -2053,24 +2040,32 @@ Line_79_did_not_match
 Line_80_did_not_match
 Line_81_did_not_match
 Line_82_did_not_match
-Line_103_did_not_match
-Line_104_did_not_match
-Line_105_did_not_match
-Line_106_did_not_match
+Line_83_did_not_match
+Line_84_did_not_match
+Line_85_did_not_match
+Line_86_did_not_match
 Line_107_did_not_match
 Line_108_did_not_match
-Line_129_did_not_match
-Line_130_did_not_match
-Line_131_did_not_match
-Line_132_did_not_match
-Line_133_did_not_match
-Line_134_did_not_match
-Line_155_did_not_match
-Line_156_did_not_match
-Line_157_did_not_match
-Line_158_did_not_match
-Line_159_did_not_match
-Line_160_did_not_match
+Line_109_did_not_match
+Line_110_did_not_match
+Line_111_did_not_match
+Line_112_did_not_match
+Line_113_did_not_match
+Line_114_did_not_match
+Line_115_did_not_match
+Line_116_did_not_match
+Line_137_did_not_match
+Line_138_did_not_match
+Line_139_did_not_match
+Line_140_did_not_match
+Line_141_did_not_match
+Line_142_did_not_match
+Line_163_did_not_match
+Line_164_did_not_match
+Line_165_did_not_match
+Line_166_did_not_match
+Line_167_did_not_match
+Line_168_did_not_match
 Your file did not match the expected ouput
  - Output did not match, testcase failed
 Hand 1:								Hand 1:
@@ -2154,7 +2149,11 @@ As Kc Kd Kh Ks 4d 						As Kc Kd Kh Ks 4d
 							      >
 							      >	hand2: Kc Kd Kh Ks As 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne 13 vs 14
+							      >	karty 0 rowne
+							      >	karty 1 rowne
+							      >	karty 2 rowne
+							      >	karty 3 rowne
+							      >	karty 4 sa rozne 8 vs 14
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -2180,7 +2179,11 @@ Ac As Kc Kd Kh Ks 						Ac As Kc Kd Kh Ks
 							      >
 							      >	hand2: Kc Kd Kh Ks Ac 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne 13 vs 14
+							      >	karty 0 rowne
+							      >	karty 1 rowne
+							      >	karty 2 rowne
+							      >	karty 3 rowne
+							      >	karty 4 sa rozne 8 vs 14
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
