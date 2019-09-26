@@ -1,4 +1,4 @@
-Grading at Thu Sep 26 11:47:37 UTC 2019
+Grading at Thu Sep 26 12:25:09 UTC 2019
 Compiling your code
 rm -f test poker cards.o my-test-main.o *~
 cc -ggdb3 -Wall -Werror -pedantic -std=gnu99   -c -o deck.o deck.c
@@ -305,7 +305,7 @@ Your file matched the expected output
  - Testcase passed
 Testcase 5: Trying hands with straights
  Checking the output 
-Line_43_did_not_match
+Line_88_did_not_match
 Your file did not match the expected ouput
  - Output did not match, testcase failed
 Hand 1:								Hand 1:
@@ -350,7 +350,7 @@ Hand 2:								Hand 2:
  - 5 cards used for hand: 6c 5h 4s 3s 2d 			 - 5 cards used for hand: 6c 5h 4s 3s 2d 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 2 wins!						      |	Hand 1 wins!
+Hand 2 wins!							Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
@@ -395,7 +395,7 @@ Kc Qh 8c 7h 6c 5d 4s 						Kc Qh 8c 7h 6c 5d 4s
  - 5 cards used for hand: 8c 7h 6c 5d 4s 			 - 5 cards used for hand: 8c 7h 6c 5d 4s 
 Comparison : 							Comparison : 
 --------------							--------------
-Hand 1 wins!							Hand 1 wins!
+Hand 1 wins!						      |	Hand 2 wins!
 ============================					============================
 Hand 1:								Hand 1:
 --------							--------
