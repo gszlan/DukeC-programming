@@ -1,4 +1,4 @@
-Grading at Thu Sep 26 21:41:27 UTC 2019
+Grading at Thu Sep 26 21:46:03 UTC 2019
 Compiling your code
 rm -f test poker cards.o my-test-main.o *~
 cc -ggdb3 -Wall -Werror -pedantic -std=gnu99   -c -o deck.o deck.c
@@ -66,7 +66,7 @@ Kc Js 7h 6c 4d 2h 						Kc Js 7h 6c 4d 2h
 							      >
 							      >	hand2: Kc Js 7h 6c 4d 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne
+							      >	karty 0 sa rozne 14 vs 13
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -95,7 +95,7 @@ As Qd 9h 8c 4d 2s 						As Qd 9h 8c 4d 2s
 							      >	karty 0 rowne
 							      >	karty 1 rowne
 							      >	karty 2 rowne
-							      >	karty 3 sa rozne
+							      >	karty 3 sa rozne 7 vs 8
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -123,7 +123,7 @@ Kh Jd 6s 5c 4d 2h 						Kh Jd 6s 5c 4d 2h
 							      >	sprawdzam rowne rankingi 
 							      >	karty 0 rowne
 							      >	karty 1 rowne
-							      >	karty 2 sa rozne
+							      >	karty 2 sa rozne 7 vs 6
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -149,7 +149,7 @@ As 9h 8c 7d 6d 							As 9h 8c 7d 6d
 							      >
 							      >	hand2: As 9h 8c 7d 6d 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne
+							      >	karty 0 sa rozne 9 vs 14
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -176,7 +176,7 @@ Ac Kd Qh 3s 2s 							Ac Kd Qh 3s 2s
 							      >	hand2: Ac Kd Qh 3s 2s 
 							      >	sprawdzam rowne rankingi 
 							      >	karty 0 rowne
-							      >	karty 1 sa rozne
+							      >	karty 1 sa rozne 12 vs 13
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -239,7 +239,7 @@ Kc Ks Js 9h 2c 							Kc Ks Js 9h 2c
 							      >
 							      >	hand2: Kc Ks Js 9h 2c 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne
+							      >	karty 0 sa rozne 14 vs 13
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -268,7 +268,7 @@ Ad Ah Qh Js 9c 2h 						Ad Ah Qh Js 9c 2h
 							      >	karty 0 rowne
 							      >	karty 1 rowne
 							      >	karty 2 rowne
-							      >	karty 3 sa rozne
+							      >	karty 3 sa rozne 9 vs 11
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -296,7 +296,7 @@ As Kh Qc Qd 9d 5c 						As Kh Qc Qd 9d 5c
 							      >	sprawdzam rowne rankingi 
 							      >	karty 0 rowne
 							      >	karty 1 rowne
-							      >	karty 2 sa rozne
+							      >	karty 2 sa rozne 13 vs 12
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -325,7 +325,7 @@ Jd 9h 7c 6h 5h 5s 						Jd 9h 7c 6h 5h 5s
 							      >	karty 0 rowne
 							      >	karty 1 rowne
 							      >	karty 2 rowne
-							      >	karty 3 sa rozne
+							      >	karty 3 sa rozne 5 vs 6
 Comparison : 							Comparison : 
 --------------							--------------
 Tie							      |	Hand 2 wins!
@@ -431,7 +431,7 @@ Ad Ah Kd Ks 3h 							Ad Ah Kd Ks 3h
 							      >	karty 1 rowne
 							      >	karty 2 rowne
 							      >	karty 3 rowne
-							      >	karty 4 sa rozne
+							      >	karty 4 sa rozne 4 vs 3
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -459,7 +459,7 @@ Ad Ah Qd Qs 3h 							Ad Ah Qd Qs 3h
 							      >	sprawdzam rowne rankingi 
 							      >	karty 0 rowne
 							      >	karty 1 rowne
-							      >	karty 2 sa rozne
+							      >	karty 2 sa rozne 13 vs 12
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -485,7 +485,7 @@ Ad Ah Jd Js 3h 							Ad Ah Jd Js 3h
 							      >
 							      >	hand2: Ad Ah Jd Js 3h 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne
+							      >	karty 0 sa rozne 13 vs 14
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -511,7 +511,7 @@ Ad Ah Qd Qs 3h 							Ad Ah Qd Qs 3h
 							      >
 							      >	hand2: Ad Ah Qd Qs 3h 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne
+							      >	karty 0 sa rozne 13 vs 14
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -537,7 +537,7 @@ Qs 7d 7s 5c 2d 2h 						Qs 7d 7s 5c 2d 2h
 							      >
 							      >	hand2: 7d 7s 2d 2h Qs 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne
+							      >	karty 0 sa rozne 11 vs 12
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!						      |	Hand 2 wins!
@@ -563,7 +563,7 @@ Qs 8d 8s 5c 2d 2h 						Qs 8d 8s 5c 2d 2h
 							      >
 							      >	hand2: 8d 8s 2d 2h Qs 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne
+							      >	karty 0 sa rozne 11 vs 12
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -592,7 +592,7 @@ Jc Js 9d 4c 4s 3h 						Jc Js 9d 4c 4s 3h
 							      >	karty 0 rowne
 							      >	karty 1 rowne
 							      >	karty 2 rowne
-							      >	karty 3 sa rozne
+							      >	karty 3 sa rozne 5 vs 4
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -618,7 +618,7 @@ Qc Qs 9d 5c 5s 3h 						Qc Qs 9d 5c 5s 3h
 							      >
 							      >	hand2: Qc Qs 5c 5s 9d 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne
+							      >	karty 0 sa rozne 11 vs 12
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -646,7 +646,7 @@ Jc Js 8d 5c 5s 3h 						Jc Js 8d 5c 5s 3h
 							      >	sprawdzam rowne rankingi 
 							      >	karty 0 rowne
 							      >	karty 1 rowne
-							      >	karty 2 sa rozne
+							      >	karty 2 sa rozne 9 vs 8
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -672,7 +672,7 @@ Jc Js 8d 5c 5s 							Jc Js 8d 5c 5s
 							      >
 							      >	hand2: Jc Js 5c 5s 8d 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne
+							      >	karty 0 sa rozne 14 vs 11
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -751,7 +751,7 @@ Jc Jd Jh 7c 5h 2c 						Jc Jd Jh 7c 5h 2c
 							      >
 							      >	hand2: Jc Jd Jh 7c 5h 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne
+							      >	karty 0 sa rozne 12 vs 11
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -780,7 +780,7 @@ Qc Qd Qh 8c 5h 2c 						Qc Qd Qh 8c 5h 2c
 							      >	karty 0 rowne
 							      >	karty 1 rowne
 							      >	karty 2 rowne
-							      >	karty 3 sa rozne
+							      >	karty 3 sa rozne 7 vs 8
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -810,7 +810,7 @@ Qc Qd Qh 7c 4h 2c 						Qc Qd Qh 7c 4h 2c
 							      >	karty 1 rowne
 							      >	karty 2 rowne
 							      >	karty 3 rowne
-							      >	karty 4 sa rozne
+							      >	karty 4 sa rozne 5 vs 4
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -867,7 +867,7 @@ As Qc Jc Jd Jh 7c 						As Qc Jc Jd Jh 7c
 							      >	hand2: Jc Jd Jh As Qc 
 							      >	sprawdzam rowne rankingi 
 							      >	karty 0 rowne
-							      >	karty 1 sa rozne
+							      >	karty 1 sa rozne 13 vs 12
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -894,7 +894,7 @@ As Qc Jc Jd Jh 7c 						As Qc Jc Jd Jh 7c
 							      >	hand2: Jc Jd Jh As Qc 
 							      >	sprawdzam rowne rankingi 
 							      >	karty 0 rowne
-							      >	karty 1 sa rozne
+							      >	karty 1 sa rozne 13 vs 12
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -970,7 +970,7 @@ Js 0c 9s 8d 7c 							Js 0c 9s 8d 7c
 							      >
 							      >	hand2: Js 0c 9s 8d 7c 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 1 sa rozne
+							      >	karty 1 sa rozne 9 vs 10
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -1031,7 +1031,7 @@ Kc Qh Qs Jd Js 0c 0s 9d 					Kc Qh Qs Jd Js 0c 0s 9d
 							      >	hand2: Kc Qh Jd 0c 9d 
 							      >	sprawdzam rowne rankingi 
 							      >	karty 1 rowne
-							      >	karty 2 sa rozne
+							      >	karty 2 sa rozne 11 vs 12
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -1059,7 +1059,7 @@ Kc Qh 8c 7h 6c 5d 4s 						Kc Qh 8c 7h 6c 5d 4s
 							      >
 							      >	hand2: 8c 7h 6c 5d 4s 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 1 sa rozne
+							      >	karty 1 sa rozne 11 vs 12
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!						      |	Hand 2 wins!
@@ -1087,7 +1087,7 @@ Ac 5s 4c 3s 2s 							Ac 5s 4c 3s 2s
 							      >
 							      >	hand2: 5s 4c 3s 2s Ac 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 1 sa rozne
+							      >	karty 1 sa rozne 13 vs 5
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -1310,7 +1310,7 @@ Qd 9d 7d 6c 5d 2d 						Qd 9d 7d 6c 5d 2d
 							      >
 							      >	hand2: Qd 9d 7d 5d 2d 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne
+							      >	karty 0 sa rozne 13 vs 12
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -1366,7 +1366,7 @@ Kc Kh Ks 9h 7h 3h 2h 						Kc Kh Ks 9h 7h 3h 2h
 							      >
 							      >	hand2: Kh 9h 7h 3h 2h 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne
+							      >	karty 0 sa rozne 14 vs 13
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -1392,7 +1392,7 @@ Kh Qh 0h 8h 6h 4h 2h 						Kh Qh 0h 8h 6h 4h 2h
 							      >
 							      >	hand2: Kh Qh 0h 8h 6h 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne
+							      >	karty 0 sa rozne 14 vs 13
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -1419,7 +1419,7 @@ Ad Kd 0d 8d 6d 4d 						Ad Kd 0d 8d 6d 4d
 							      >	hand2: Ad Kd 0d 8d 6d 
 							      >	sprawdzam rowne rankingi 
 							      >	karty 0 rowne
-							      >	karty 1 sa rozne
+							      >	karty 1 sa rozne 12 vs 13
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -1446,7 +1446,7 @@ Ad Jd 0d 8d 6d 4d 						Ad Jd 0d 8d 6d 4d
 							      >	hand2: Ad Jd 0d 8d 6d 
 							      >	sprawdzam rowne rankingi 
 							      >	karty 0 rowne
-							      >	karty 1 sa rozne
+							      >	karty 1 sa rozne 12 vs 11
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -1474,7 +1474,7 @@ As Qs Js 8s 6s 4s 						As Qs Js 8s 6s 4s
 							      >	sprawdzam rowne rankingi 
 							      >	karty 0 rowne
 							      >	karty 1 rowne
-							      >	karty 2 sa rozne
+							      >	karty 2 sa rozne 10 vs 11
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -1502,7 +1502,7 @@ As Qs 9s 8s 6s 4s 						As Qs 9s 8s 6s 4s
 							      >	sprawdzam rowne rankingi 
 							      >	karty 0 rowne
 							      >	karty 1 rowne
-							      >	karty 2 sa rozne
+							      >	karty 2 sa rozne 10 vs 9
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -1531,7 +1531,7 @@ Ac Qc 0c 9c 6c 4c 						Ac Qc 0c 9c 6c 4c
 							      >	karty 0 rowne
 							      >	karty 1 rowne
 							      >	karty 2 rowne
-							      >	karty 3 sa rozne
+							      >	karty 3 sa rozne 8 vs 9
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -1560,7 +1560,7 @@ Ac Qc 0c 7c 6c 4c 						Ac Qc 0c 7c 6c 4c
 							      >	karty 0 rowne
 							      >	karty 1 rowne
 							      >	karty 2 rowne
-							      >	karty 3 sa rozne
+							      >	karty 3 sa rozne 8 vs 7
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -1590,7 +1590,7 @@ Ah Qh 0h 8h 7h 4h 						Ah Qh 0h 8h 7h 4h
 							      >	karty 1 rowne
 							      >	karty 2 rowne
 							      >	karty 3 rowne
-							      >	karty 4 sa rozne
+							      >	karty 4 sa rozne 6 vs 7
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -1620,7 +1620,7 @@ Ah Qh 0h 8h 5h 4h 						Ah Qh 0h 8h 5h 4h
 							      >	karty 1 rowne
 							      >	karty 2 rowne
 							      >	karty 3 rowne
-							      >	karty 4 sa rozne
+							      >	karty 4 sa rozne 6 vs 5
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -1782,7 +1782,7 @@ Kd Kh Ks 9h 7c 7h 2h 						Kd Kh Ks 9h 7c 7h 2h
 							      >	karty 0 rowne
 							      >	karty 1 rowne
 							      >	karty 2 rowne
-							      >	karty 3 sa rozne
+							      >	karty 3 sa rozne 8 vs 9
 Comparison : 							Comparison : 
 --------------							--------------
 Tie							      |	Hand 2 wins!
@@ -1808,7 +1808,7 @@ Qd Qh Qs 9h 7c 7h 2h 						Qd Qh Qs 9h 7c 7h 2h
 							      >
 							      >	hand2: Qd Qh Qs 7c 7h 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne
+							      >	karty 0 sa rozne 13 vs 12
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -1834,7 +1834,7 @@ Qd Qh Qs 9h 8c 8h 2h 						Qd Qh Qs 9h 8c 8h 2h
 							      >
 							      >	hand2: Qd Qh Qs 8c 8h 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne
+							      >	karty 0 sa rozne 13 vs 12
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -1860,7 +1860,7 @@ Qd Qh Qs 9h 7c 7h 7s 						Qd Qh Qs 9h 7c 7h 7s
 							      >
 							      >	hand2: Qd Qh Qs 7c 7h 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne
+							      >	karty 0 sa rozne 13 vs 12
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -1886,7 +1886,7 @@ Qd Qh Qs 9h 8c 8h 						Qd Qh Qs 9h 8c 8h
 							      >
 							      >	hand2: Qd Qh Qs 8c 8h 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne
+							      >	karty 0 sa rozne 13 vs 12
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -1913,7 +1913,7 @@ Ad Ah As 8c 8d 8h 						Ad Ah As 8c 8d 8h
 							      >	hand2: Ad Ah As 8c 8d 
 							      >	sprawdzam rowne rankingi 
 							      >	karty 0 rowne
-							      >	karty 1 sa rozne
+							      >	karty 1 sa rozne 13 vs 14
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -1940,7 +1940,7 @@ Ad Ah As 6c 6d 6h 						Ad Ah As 6c 6d 6h
 							      >	hand2: Ad Ah As 6c 6d 
 							      >	sprawdzam rowne rankingi 
 							      >	karty 0 rowne
-							      >	karty 1 sa rozne
+							      >	karty 1 sa rozne 13 vs 14
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -1968,7 +1968,7 @@ Kh Ks 9d 3c 3h 3s 2c 						Kh Ks 9d 3c 3h 3s 2c
 							      >	sprawdzam rowne rankingi 
 							      >	karty 0 rowne
 							      >	karty 1 rowne
-							      >	karty 2 sa rozne
+							      >	karty 2 sa rozne 8 vs 9
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!						      |	Hand 2 wins!
@@ -1994,7 +1994,7 @@ Qh Qs 9d 3c 3h 3s 2c 						Qh Qs 9d 3c 3h 3s 2c
 							      >
 							      >	hand2: 3c 3h 3s Qh Qs 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne
+							      >	karty 0 sa rozne 13 vs 12
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -2020,7 +2020,7 @@ Jh Js 9d 7c 7h 7s 2c 						Jh Js 9d 7c 7h 7s 2c
 							      >
 							      >	hand2: 7c 7h 7s Jh Js 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne
+							      >	karty 0 sa rozne 13 vs 11
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -2128,7 +2128,7 @@ Kc Kd Kh Ks 9d 8c 						Kc Kd Kh Ks 9d 8c
 							      >	karty 1 rowne
 							      >	karty 2 rowne
 							      >	karty 3 rowne
-							      >	karty 4 sa rozne
+							      >	karty 4 sa rozne 8 vs 9
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -2154,7 +2154,7 @@ As Kc Kd Kh Ks 4d 						As Kc Kd Kh Ks 4d
 							      >
 							      >	hand2: Kc Kd Kh Ks As 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne
+							      >	karty 0 sa rozne 13 vs 14
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -2180,7 +2180,7 @@ Ac As Kc Kd Kh Ks 						Ac As Kc Kd Kh Ks
 							      >
 							      >	hand2: Kc Kd Kh Ks Ac 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne
+							      >	karty 0 sa rozne 13 vs 14
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 2 wins!							Hand 2 wins!
@@ -2206,7 +2206,7 @@ Qc Qd Qh Qs 8c 6d 						Qc Qd Qh Qs 8c 6d
 							      >
 							      >	hand2: Qc Qd Qh Qs 8c 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne
+							      >	karty 0 sa rozne 13 vs 12
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -2232,7 +2232,7 @@ Qc Qd Qh Qs 9c 6d 						Qc Qd Qh Qs 9c 6d
 							      >
 							      >	hand2: Qc Qd Qh Qs 9c 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne
+							      >	karty 0 sa rozne 13 vs 12
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -2279,7 +2279,7 @@ Kh Qh Jh 0h 9h 							Kh Qh Jh 0h 9h
 							      >
 							      >	hand2: Kh Qh Jh 0h 9h 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne
+							      >	karty 0 sa rozne 14 vs 13
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
@@ -2311,7 +2311,7 @@ Kh Qh Jh 0h 9h 8h 7h 						Kh Qh Jh 0h 9h 8h 7h
 							      >
 							      >	hand2: Kh Qh Jh 0h 9h 
 							      >	sprawdzam rowne rankingi 
-							      >	karty 0 sa rozne
+							      >	karty 0 sa rozne 14 vs 13
 Comparison : 							Comparison : 
 --------------							--------------
 Hand 1 wins!							Hand 1 wins!
