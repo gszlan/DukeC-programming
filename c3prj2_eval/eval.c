@@ -122,7 +122,7 @@ int is_n_length_straight_at(deck_t * hand, size_t index, suit_t fs, int n) {
     if (!suit_found)
        suit_found = is_suit_matched(*(hand->cards[index]), fs);
     if (previous_value - current_value > 1)  return 0;
-    //if (current_value == previous_value)  continue;
+    if (current_value == previous_value && !suit_found)  continue;
  
     if(suit_found) {
         straight_found++;
