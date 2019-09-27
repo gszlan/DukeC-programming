@@ -113,7 +113,8 @@ int is_n_length_straight_at(deck_t * hand, size_t index, suit_t fs, int n) {
   if(suit_found) {
       straight_found++;
       suit_found = 0;
-  }
+  } else return 0; 
+
   
   // main loop
   for (; index < hand_size && straight_found < n; index++) {
