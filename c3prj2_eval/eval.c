@@ -122,7 +122,7 @@ int is_n_length_straight_at(deck_t * hand, size_t index, suit_t fs, int n) {
     current_value = hand->cards[index]->value;
     if (!suit_found)
        suit_found = is_suit_matched(*(hand->cards[index]), fs);
-    // if value difference is greater than 1, no ttraight for sure
+    // if value difference is greater than 1, no straight for sure
     if (previous_value - current_value > 1)  return 0;
     // if value is the same and looking for any suit, we can continue as
     // such value was already counted for straight
@@ -202,12 +202,9 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
   hand_eval_t eval_hand1 = evaluate_hand(hand1);
   hand_eval_t eval_hand2 = evaluate_hand(hand2);
 
+  // rankings are equals
   if (eval_hand1.ranking == eval_hand2.ranking) {
-      // for staights do not compare first 2 cards 
-      // to handle A-low straight
-      int i = 0;
-      //if (eval_hand1.ranking == STRAIGHT || eval_hand1.ranking == STRAIGHT_FLUSH) i=1;
-      for(; i < 5 ; i++) {
+      for(int i; i < 5 ; i++) {
             if (eval_hand1.cards[i]->value == eval_hand2.cards[i]->value) {
                 continue;
             }
