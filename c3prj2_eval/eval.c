@@ -204,7 +204,7 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
 
   // rankings are equals
   if (eval_hand1.ranking == eval_hand2.ranking) {
-      for(int i; i < 5 ; i++) {
+      for(int i = 0; i < 5; i++) {
             if (eval_hand1.cards[i]->value == eval_hand2.cards[i]->value) {
                 continue;
             }
