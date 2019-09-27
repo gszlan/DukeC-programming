@@ -121,9 +121,12 @@ int is_n_length_straight_at(deck_t * hand, size_t index, suit_t fs, int n) {
     current_value = hand->cards[index]->value;
     if (!suit_found)
        suit_found = is_suit_matched(*(hand->cards[index]), fs);
+    // if value difference is greater than 1, no ttraight for sure
     if (previous_value - current_value > 1)  return 0;
+    // if value is the same and looking for any suit, we can continue as
+    // such value was already counted for straight
     if (current_value == previous_value) {
-        if (hand->cards[index]->suit == NUM_SUITS)
+        if (fs == NUM_SUITS)
             continue;
         else if (!suit_found)
             continue;
