@@ -6,7 +6,7 @@ void otworzPlik(char * filename, FILE ** f) {
 
     *f = fopen(filename,"r");
     if (f == NULL) {
-        perror("Wystapil nastepujacy blad: ");
+        fprintf(stderr,"Incorrect file\n");
         exit(EXIT_FAILURE);
     }
 }
@@ -44,7 +44,7 @@ int znajdzKlucz(double * arr1) {
     int i = 0;
     int key;
     for(; i < 26; i++) {
-        if (arr1[i] > 0.11) {
+        if (arr1[i] > 0.10) {
             if (i - 4 < 0) key = i - 4 + 26;
             else key = i - 4;
             printf("%i\n",key);
@@ -58,7 +58,7 @@ int znajdzKlucz(double * arr1) {
 int main(int argc, char **argv) {
 
     if (argc != 2) {
-        printf("Valid format is as follows: %s filename\n",argv[0]);
+        fprintf(stderr, "Valid format is as follows: %s filename\n",argv[0]);
         exit(EXIT_FAILURE);
     }
 
