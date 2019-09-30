@@ -57,7 +57,7 @@ void znajdzKlucz(double * arr1) {
         }
     }
 
-    if(mostFreqValue < 0.11) {
+    if(mostFreqValue < 0.12) {
         fprintf(stderr,"Cound not find the key!\n");
         exit(EXIT_FAILURE);
     }
