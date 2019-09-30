@@ -18,6 +18,7 @@ void wczytajPlik(FILE *f, size_t *arr) {
 
     while ((letter = fgetc(f)) != EOF) {
         letter = tolower(letter);
+        fprintf(stderr,"%c",letter);
         if (isalpha(letter)) {
             arr[letter - 'a'] += 1;
         }
