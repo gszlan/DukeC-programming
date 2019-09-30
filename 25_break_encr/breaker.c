@@ -47,18 +47,24 @@ void policzCzestotliwosc(int * arr1, double * arr2) {
 
 int znajdzKlucz(double * arr1) {
 
-    int i = 0;
+    int i = 1;
+    int mostFreqIndex = 0;
+    double mostFreqValue = arr1[0];
     int key;
     for(; i < 26; i++) {
-        if (arr1[i] > 0.12) {
-            if (i - 4 < 0) key = i - 4 + 26;
-            else key = i - 4;
-            printf("%i\n",key);
-            exit(0);
+        if (arr1[i] > mostFreqValue) {
+            mostFreqIndex = i;
+            mostFreqValue = arr1[i];
         }
     }
-    fprintf(stderr,"Cound not find the key!\n");
-    exit(EXIT_FAILURE);
+
+    if(mostFreqValue < 0.12) {
+        fprintf(stderr,"Cound not find the key!\n");
+        exit(EXIT_FAILURE);
+    }
+
+    key =  mostFreqIndex - 4;
+    return (key < 0 ? key + 26 : key); 
 }
 
 int main(int argc, char **argv) {
