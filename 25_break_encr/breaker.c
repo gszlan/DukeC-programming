@@ -2,12 +2,12 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-void otworzPlik(char * filename, FILE * f) {
+void otworzPlik(char * filename, FILE ** f) {
 
-    f = fopen(filename,"r");
+    *f = fopen(filename,"r");
     if (f == NULL) {
         perror("Wystapil nastepujacy blad: ");
-        exit(-1);
+        exit(EXIT_FAILURE);
     }
 }
 
@@ -23,8 +23,8 @@ void wczytajPlik(FILE *f, int *arr) {
             arr[letter - 'a'] += 1;
         }
     }
-
-    return;
+    if (!feof(f))
+        perror("Blad odczytu pliku");
 }
 
 void policzCzestotliwosc(int * arr1, double * arr2) {
@@ -59,14 +59,14 @@ int main(int argc, char **argv) {
 
     if (argc != 2) {
         printf("Valid format is as follows: %s filename\n",argv[0]);
-        exit(-1);
+        exit(EXIT_FAILURE);
     }
 
-    FILE f;
+    FILE *f;
     otworzPlik(argv[1],&f);
 
     int letters[26] = {0};
-    wczytajPlik(&f, letters);
+    wczytajPlik(f, letters);
 
     double frequency[26] = {0};
     policzCzestotliwosc(letters, frequency);
