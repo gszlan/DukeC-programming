@@ -46,10 +46,10 @@ void policzCzestotliwosc(uint64_t * arr1, double * arr2) {
     }
 }
 
-void znajdzKlucz(double * arr1) {
+void znajdzKlucz(uint64_t * arr1) {
 
     int  mostFreqIndex = 0;
-    double mostFreqValue = arr1[0];
+    uint64_t mostFreqValue = arr1[0];
     for(int i = 1; i < 26; i++) {
         if (arr1[i] > mostFreqValue) {
             mostFreqIndex = i;
@@ -57,10 +57,10 @@ void znajdzKlucz(double * arr1) {
         }
     }
 
-    if(mostFreqValue < 0.12) {
-        fprintf(stderr,"Cound not find the key!\n");
-        exit(EXIT_FAILURE);
-    }
+    //if(mostFreqValue < 0.12) {
+    //    fprintf(stderr,"Cound not find the key!\n");
+    //    exit(EXIT_FAILURE);
+    //}
 
     int key = mostFreqIndex - 4;
     key = (key < 0) ? (key + 26) : key; 
@@ -80,10 +80,10 @@ int main(int argc, char **argv) {
     uint64_t letters[26] = {0};
     wczytajPlik(f, letters);
 
-    double frequency[26] = {0};
-    policzCzestotliwosc(letters, frequency);
+    //double frequency[26] = {0};
+    //policzCzestotliwosc(letters, frequency);
 
-    znajdzKlucz(frequency);
+    znajdzKlucz(letters);
 
     return 0;
 }
