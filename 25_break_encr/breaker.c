@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <stdint.h>
 
 void otworzPlik(char * filename, FILE ** f) {
 
@@ -12,13 +13,12 @@ void otworzPlik(char * filename, FILE ** f) {
 }
 
 
-void wczytajPlik(FILE *f, size_t *arr) {
+void wczytajPlik(FILE *f, uint64_t *arr) {
 
     int letter;
 
     while ((letter = fgetc(f)) != EOF) {
         letter = tolower(letter);
-        fprintf(stderr,"%c",letter);
         if (isalpha(letter)) {
             arr[letter - 'a'] += 1;
         }
@@ -28,9 +28,9 @@ void wczytajPlik(FILE *f, size_t *arr) {
 }
 
 
-void policzCzestotliwosc(size_t * arr1, double * arr2) {
+void policzCzestotliwosc(uint64_t * arr1, double * arr2) {
     
-    long total = 0;
+    uint64_t total = 0;
 
     for (int i =0; i < 26; i++) {
         total += arr1[i];
@@ -48,7 +48,7 @@ void policzCzestotliwosc(size_t * arr1, double * arr2) {
 
 void znajdzKlucz(double * arr1) {
 
-    int mostFreqIndex = 0;
+    int  mostFreqIndex = 0;
     double mostFreqValue = arr1[0];
     for(int i = 1; i < 26; i++) {
         if (arr1[i] > mostFreqValue) {
@@ -77,7 +77,7 @@ int main(int argc, char **argv) {
     FILE *f;
     otworzPlik(argv[1],&f);
 
-    size_t letters[26] = {0};
+    uint64_t letters[26] = {0};
     wczytajPlik(f, letters);
 
     double frequency[26] = {0};
