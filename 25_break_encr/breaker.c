@@ -30,8 +30,14 @@ void wczytajPlik(FILE *f, int *arr) {
 void policzCzestotliwosc(int * arr1, double * arr2) {
     
     int total = 0;
+
     for (int i =0; i < 26; i++) {
         total += arr1[i];
+    }
+
+    if (total == 0) {
+        fprintf(stderr,"File is empty\n");
+        exit(EXIT_FAILURE);
     }
 
     for (int i = 0; i < 26; i++) {
