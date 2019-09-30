@@ -50,7 +50,7 @@ int znajdzKlucz(double * arr1) {
     int i = 0;
     int key;
     for(; i < 26; i++) {
-        if (arr1[i] > 0.10) {
+        if (arr1[i] > 0.12) {
             if (i - 4 < 0) key = i - 4 + 26;
             else key = i - 4;
             printf("%i\n",key);
