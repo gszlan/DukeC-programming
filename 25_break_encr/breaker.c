@@ -12,7 +12,6 @@ void otworzPlik(char * filename, FILE ** f) {
 }
 
 
-
 void wczytajPlik(FILE *f, int *arr) {
 
     int letter;
@@ -26,6 +25,7 @@ void wczytajPlik(FILE *f, int *arr) {
     if (!feof(f))
         perror("Blad odczytu pliku");
 }
+
 
 void policzCzestotliwosc(int * arr1, double * arr2) {
     
@@ -45,7 +45,7 @@ void policzCzestotliwosc(int * arr1, double * arr2) {
     }
 }
 
-int znajdzKlucz(double * arr1) {
+void znajdzKlucz(double * arr1) {
 
     int mostFreqIndex = 0;
     double mostFreqValue = arr1[0];
@@ -62,7 +62,8 @@ int znajdzKlucz(double * arr1) {
     }
 
     int key = mostFreqIndex - 4;
-    return (key < 0) ? (key + 26) : key; 
+    key = (key < 0) ? (key + 26) : key; 
+    printf("%d\n",key);
 }
 
 int main(int argc, char **argv) {
