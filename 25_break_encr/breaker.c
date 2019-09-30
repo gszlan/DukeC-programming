@@ -12,7 +12,7 @@ void otworzPlik(char * filename, FILE ** f) {
 }
 
 
-void wczytajPlik(FILE *f, int *arr) {
+void wczytajPlik(FILE *f, size_t *arr) {
 
     int letter;
 
@@ -27,9 +27,9 @@ void wczytajPlik(FILE *f, int *arr) {
 }
 
 
-void policzCzestotliwosc(int * arr1, double * arr2) {
+void policzCzestotliwosc(size_t * arr1, double * arr2) {
     
-    int total = 0;
+    long total = 0;
 
     for (int i =0; i < 26; i++) {
         total += arr1[i];
@@ -76,7 +76,7 @@ int main(int argc, char **argv) {
     FILE *f;
     otworzPlik(argv[1],&f);
 
-    int letters[26] = {0};
+    size_t letters[26] = {0};
     wczytajPlik(f, letters);
 
     double frequency[26] = {0};
