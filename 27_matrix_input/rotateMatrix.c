@@ -24,6 +24,39 @@ void copyArray(char src[10][10], char dst[10][10]) {
 }
 
 
+/*
+void readMatrix(char matrix[10][10], char * filename) {
+
+  FILE *f = fopen(filename, "r");
+  if (f == NULL) {
+      perror("Nie udalo sie otworzyc pliku");
+      exit(EXIT_FAILURE);
+  }
+
+  int rows = 0;
+  char c;
+  char line[13] = {0};
+
+  while(fgets(line,12,f) || !feof(f)) {
+    
+    // sprawdzamy dlugosc
+    if ((strlen(line) != 11) && line[10] != '\n') {
+        fprintf(stderr,"Niewlasciwa dlugosc wiersza \n");
+        exit(EXIT_FAILURE);
+    }
+
+    // przepisujemy wartosci
+    for(int i =0; i < 10; i++) {
+        matrix[rows][i] = line[0];
+    }
+    rows++;
+    
+
+
+}
+*/
+
+
 
 void readMatrix(char matrix[10][10], char * filename) {
 
@@ -34,17 +67,16 @@ void readMatrix(char matrix[10][10], char * filename) {
   }
 
   int rows = 0;
-  int columns = -1;
+  int columns = 0;
   char c;
 
   while( ((c = fgetc(f)) != EOF) || !feof(f)) { 
-    columns++;
     if (c == '\n') {
         if ( columns < 9) {
             fprintf(stderr, "Wiersz %d jest za krotki\n", rows + 1);
             exit(EXIT_FAILURE);
         } else {
-            columns = -1;
+            columns = 0;
             rows++;
             continue;
         }
@@ -53,18 +85,19 @@ void readMatrix(char matrix[10][10], char * filename) {
         fprintf(stderr,"Za duzo znakow w wierszu %d \n", rows + 1);
         exit(EXIT_FAILURE);
     }
-    if (rows > 10 || (rows > 9 && columns > -1)) {
+    if (rows > 10 || (rows > 9 && columns > 0)) {
         fprintf(stderr,"Za duzo wierszy : %d\n",rows);
         exit(EXIT_FAILURE);
     }
     matrix[rows][columns] = c;
+    columns++;
   }
  
   if (rows < 9) {
       fprintf(stderr,"Za malo wierszy w koncu\n");
       exit(EXIT_FAILURE);
   }
-  if (columns != -1) {
+  if (columns != 0) {
       fprintf(stderr, "Za krotki wiersz w koncu\n");
       exit(EXIT_FAILURE);
   }
