@@ -24,38 +24,6 @@ void copyArray(char src[10][10], char dst[10][10]) {
 }
 
 
-/*
-void readMatrix(char matrix[10][10], char * filename) {
-
-  FILE *f = fopen(filename, "r");
-  if (f == NULL) {
-      perror("Nie udalo sie otworzyc pliku");
-      exit(EXIT_FAILURE);
-  }
-
-  int rows = 0;
-  char c;
-  char line[13] = {0};
-
-  while(fgets(line,12,f) || !feof(f)) {
-    
-    // sprawdzamy dlugosc
-    if ((strlen(line) != 11) && line[10] != '\n') {
-        fprintf(stderr,"Niewlasciwa dlugosc wiersza \n");
-        exit(EXIT_FAILURE);
-    }
-
-    // przepisujemy wartosci
-    for(int i =0; i < 10; i++) {
-        matrix[rows][i] = line[0];
-    }
-    rows++;
-    
-
-
-}
-*/
-
 void printError(char * str, FILE * f) {
 
   fprintf(stderr,"%s", str);
@@ -77,7 +45,7 @@ void readMatrix(char matrix[10][10], char * filename) {
 
   while( ((c = fgetc(f)) != EOF) || !feof(f)) { 
     if (c == '\n') {
-        if ( columns < 9) {
+        if ( columns < 10) {
             printError("Wiersz jest za krotki \n", f);
         } else {
             columns = 0;
@@ -94,8 +62,8 @@ void readMatrix(char matrix[10][10], char * filename) {
     matrix[rows][columns] = c;
     columns++;
   }
- 
-  if (rows < 9) {
+
+  if (rows < 10) {
       printError("Za malo wierszy w koncu\n", f);
   }
   if (columns != 0) {
