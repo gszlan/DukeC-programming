@@ -41,7 +41,7 @@ void readMatrix(char matrix[10][10], char * filename) {
     columns++;
     if (c == '\n') {
         if ( columns < 9) {
-            fprintf(stderr, "Row %d is to short\n", rows + 1);
+            fprintf(stderr, "Wiersz %d jest za krotki\n", rows + 1);
             exit(EXIT_FAILURE);
         } else {
             columns = -1;
@@ -50,18 +50,22 @@ void readMatrix(char matrix[10][10], char * filename) {
         }
     }
     if (columns > 9) {
-        fprintf(stderr,"Too many chars in row %d \n", rows + 1);
+        fprintf(stderr,"Za duzo znakow w wierszu %d \n", rows + 1);
         exit(EXIT_FAILURE);
     }
     if (rows > 10 || (rows > 9 && columns > -1)) {
-        fprintf(stderr,"Too many rows: %d\n",rows);
+        fprintf(stderr,"Za duzo wierszy : %d\n",rows);
         exit(EXIT_FAILURE);
     }
     matrix[rows][columns] = c;
   }
 
   if (rows < 9) {
-      fprintf(stderr,"Not enought rows\n");
+      fprintf(stderr,"Za malo wierszy w koncu\n");
+      exit(EXIT_FAILURE);
+  }
+  if (columns < 9) {
+      fprintf(stderr, "Za krotki wiersz w koncu\n");
       exit(EXIT_FAILURE);
   }
   if (fclose(f)) {
