@@ -59,12 +59,12 @@ void readMatrix(char matrix[10][10], char * filename) {
     }
     matrix[rows][columns] = c;
   }
-
+ 
   if (rows < 9) {
       fprintf(stderr,"Za malo wierszy w koncu\n");
       exit(EXIT_FAILURE);
   }
-  if (columns < 9) {
+  if (columns != -1) {
       fprintf(stderr, "Za krotki wiersz w koncu\n");
       exit(EXIT_FAILURE);
   }
