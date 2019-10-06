@@ -56,7 +56,12 @@ void readMatrix(char matrix[10][10], char * filename) {
 }
 */
 
+void printError(char * str, FILE * f) {
 
+  fprintf(stderr,"%s", str);
+  fclose(f);
+  exit(EXIT_FAILURE);
+}
 
 void readMatrix(char matrix[10][10], char * filename) {
 
@@ -73,8 +78,7 @@ void readMatrix(char matrix[10][10], char * filename) {
   while( ((c = fgetc(f)) != EOF) || !feof(f)) { 
     if (c == '\n') {
         if ( columns < 9) {
-            fprintf(stderr, "Wiersz %d jest za krotki\n", rows + 1);
-            exit(EXIT_FAILURE);
+            printError("Wiersz jest za krotki \n", f);
         } else {
             columns = 0;
             rows++;
@@ -82,24 +86,20 @@ void readMatrix(char matrix[10][10], char * filename) {
         }
     }
     if (columns > 9) {
-        fprintf(stderr,"Za duzo znakow w wierszu %d \n", rows + 1);
-        exit(EXIT_FAILURE);
+        printError("Za duzo znakow w wierszu \n", f);
     }
     if (rows > 10 || (rows > 9 && columns > 0)) {
-        fprintf(stderr,"Za duzo wierszy : %d\n",rows);
-        exit(EXIT_FAILURE);
+        printError("Za duzo wierszy", f);
     }
     matrix[rows][columns] = c;
     columns++;
   }
  
   if (rows < 9) {
-      fprintf(stderr,"Za malo wierszy w koncu\n");
-      exit(EXIT_FAILURE);
+      printError("Za malo wierszy w koncu\n", f);
   }
   if (columns != 0) {
-      fprintf(stderr, "Za krotki wiersz w koncu\n");
-      exit(EXIT_FAILURE);
+      printError("Za krotki wiesz w koncu", f);
   }
   if (fclose(f)) {
       perror("Nie udalo sie zamknac pliku");
