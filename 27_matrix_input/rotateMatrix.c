@@ -1,7 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void copyArray(char[10][10], char[10][10]);
+void copyArray(char src[10][10], char dst[10][10]) {
+
+    for(int x = 0; x < 10; x++)
+        for(int y = 0; y < 10; y++)
+            dst[x][y] = src[x][y];
+}
+
 
 void rotate(char matrix[10][10]) {
 
@@ -16,13 +22,6 @@ void rotate(char matrix[10][10]) {
     copyArray(temp, matrix);
 }
 
-void copyArray(char src[10][10], char dst[10][10]) {
-
-    for(int x = 0; x < 10; x++)
-        for(int y = 0; y < 10; y++)
-            dst[x][y] = src[x][y];
-}
-
 
 void printError(char * str, FILE * f) {
 
@@ -30,6 +29,7 @@ void printError(char * str, FILE * f) {
   fclose(f);
   exit(EXIT_FAILURE);
 }
+
 
 void readMatrix(char matrix[10][10], char * filename) {
 
@@ -67,10 +67,10 @@ void readMatrix(char matrix[10][10], char * filename) {
       printError("Za malo wierszy w koncu\n", f);
   }
   if (columns != 0) {
-      printError("Za krotki wiesz w koncu", f);
+      printError("Za krotki wiesz w koncu\n", f);
   }
   if (fclose(f)) {
-      perror("Nie udalo sie zamknac pliku");
+      perror("Nie udalo sie zamknac pliku\n");
       exit(EXIT_FAILURE);
   }
 }
@@ -85,6 +85,7 @@ void printMatrix(char matrix[10][10]) {
       printf("\n");
   }
 }
+
 
 int main(int argc, char** argv) {
 
