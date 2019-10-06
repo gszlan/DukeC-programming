@@ -37,7 +37,7 @@ void readMatrix(char matrix[10][10], char * filename) {
   int columns = -1;
   char c;
 
-  while( (c = fgetc(f)) != EOF ) { 
+  while( ((c = fgetc(f)) != EOF) || !feof(f)) { 
     columns++;
     if (c == '\n') {
         if ( columns < 9) {
