@@ -111,9 +111,9 @@ void printBoard(board_t * b) {
 }
 int countMines(board_t * b, int x, int y) {
   int xMin = ( x == 0 ? 0 : x - 1);
-  int xMax = ( x == b->width ? b->width : x + 1);
+  int xMax = ( x == b->width - 1 ? b->width - 1 : x + 1);
   int yMin = ( y == 0 ? 0 : y - 1);
-  int yMax = ( y == b->height ? b->height : y + 1);
+  int yMax = ( y == b->height - 1 ? b->height -1 : y + 1);
   int count = 0;
   for (int i = yMin; i <= yMax; i++) {
       for (int j = xMin; j <= xMax; j++) {
@@ -121,8 +121,8 @@ int countMines(board_t * b, int x, int y) {
               count++;
       }
   }
-  if(IS_MINE(b->board[y][x]))
-      count--;
+ // if(IS_MINE(b->board[y][x]))
+ //     count--;
   return count;
 }
 int click (board_t * b, int x, int y) {
