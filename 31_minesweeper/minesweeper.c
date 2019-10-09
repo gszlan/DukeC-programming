@@ -117,7 +117,7 @@ int countMines(board_t * b, int x, int y) {
   int count = 0;
   for (int i = yMin; i <= yMax; i++) {
       for (int j = xMin; j <= xMax; j++) {
-          if (IS_MINE(b->board[i][y])) 
+          if (IS_MINE(b->board[i][j])) 
               count++;
       }
   }
