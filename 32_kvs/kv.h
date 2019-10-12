@@ -1,6 +1,7 @@
 #ifndef __KV_H__
 #define __KV_H__
 
+// this is only test
 
 struct _kvpair_t { 
   char * key;
