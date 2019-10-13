@@ -76,6 +76,7 @@ kvarray_t * readKVs(const char * fname) {
   kvarray->list = NULL;
   kvarray->size = 0;
   while((nread = getline(&line, &len, f)) != -1) {
+    line[nread - 1] = '\0';  
     if ((pair = readValues(line)) != NULL) {
         addPair(kvarray,pair);
     }
