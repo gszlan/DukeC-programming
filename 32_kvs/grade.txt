@@ -1,0 +1,15 @@
+Grading at Sun Oct 13 21:03:06 UTC 2019
+Attempting to compile:
+#################################################
+testcase1:
+Your output is incorrect
+#################################################
+testcase2:
+Your output is incorrect
+#################################################
+testcase3:
+Your output is correct
+  - Valgrind was clean (no errors, no memory leaks)
+valgrind was clean
+
+Overall Grade: F
