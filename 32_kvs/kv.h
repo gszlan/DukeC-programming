@@ -1,8 +1,6 @@
 #ifndef __KV_H__
 #define __KV_H__
 
-// this is only test
-
 struct _kvpair_t { 
   char * key;
   char * value;
@@ -11,7 +9,7 @@ struct _kvpair_t {
 typedef struct _kvpair_t kvpair_t;
 
 struct _kvarray_t { 
-  kvpair_t * list;
+  kvpair_t ** list;
   size_t size;
 
 };
