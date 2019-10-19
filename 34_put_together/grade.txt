@@ -1,4 +1,4 @@
-Grading at Sat Oct 19 18:36:55 UTC 2019
+Grading at Sat Oct 19 18:45:16 UTC 2019
 Attempting to compile:
 rm -f  outname.o  counts.o  main.o  kv.o count_values *~
 gcc -c -Wall -Werror -std=gnu99 -pedantic -ggdb3 outname.c
@@ -12,12 +12,289 @@ Podaj przynajmniej 2 pliki a jest 1
 testcase1 failed, your program didn't indicate this is a failure case
 #################################################
 testcase2:
-valgrind reported memory errors
+I expected to find a file called '62list1a.txt.counts' but it did not exist
+(or was not a regular file)
+Here are the files that I can find:
+62list1a.txt
+62list1a.txt.count
+62list1b.txt
+62list1b.txt.count
+62list2a.txt
+62list2b.txt
+62list2c.txt
+62list3a.txt
+counts.c
+counts.h
+counts.o
+count_values
+count_values.stderr
+count_values.stdout
+grade.txt
+kv.c
+kv.h
+kv.o
+kvs1.txt
+kvs2.txt
+list1a.txt
+list1a.txt.ans
+list1b.txt
+list1b.txt.ans
+list2a.txt
+list2a.txt.ans
+list2b.txt
+list2b.txt.ans
+list2c.txt
+list2c.txt.ans
+main.c
+main.o
+Makefile
+outname.c
+outname.h
+outname.o
+README
+temp.txt
+vg.log
+Comparing file list1a.txt.counts with answer
+Your output is correct
+Comparing file list1b.txt.counts with answer
+I expected to find a file called '62list1b.txt.counts' but it did not exist
+(or was not a regular file)
+Here are the files that I can find:
+62list1a.txt
+62list1a.txt.count
+62list1b.txt
+62list1b.txt.count
+62list2a.txt
+62list2b.txt
+62list2c.txt
+62list3a.txt
+counts.c
+counts.h
+counts.o
+count_values
+count_values.stderr
+count_values.stdout
+grade.txt
+kv.c
+kv.h
+kv.o
+kvs1.txt
+kvs2.txt
+list1a.txt
+list1a.txt.ans
+list1b.txt
+list1b.txt.ans
+list2a.txt
+list2a.txt.ans
+list2b.txt
+list2b.txt.ans
+list2c.txt
+list2c.txt.ans
+main.c
+main.o
+Makefile
+outname.c
+outname.h
+outname.o
+README
+temp.txt
+vg.log
+Your output is incorrect
 #################################################
 testcase3:
-valgrind reported memory errors
+I expected to find a file called '62list2a.txt.counts' but it did not exist
+(or was not a regular file)
+Here are the files that I can find:
+62list1a.txt
+62list1a.txt.count
+62list1b.txt
+62list1b.txt.count
+62list2a.txt
+62list2a.txt.count
+62list2b.txt
+62list2b.txt.count
+62list2c.txt
+62list2c.txt.count
+62list3a.txt
+counts.c
+counts.h
+counts.o
+count_values
+count_values.stderr
+count_values.stdout
+grade.txt
+kv.c
+kv.h
+kv.o
+kvs1.txt
+kvs2.txt
+list1a.txt
+list1a.txt.ans
+list1b.txt
+list1b.txt.ans
+list2a.txt
+list2a.txt.ans
+list2b.txt
+list2b.txt.ans
+list2c.txt
+list2c.txt.ans
+main.c
+main.o
+Makefile
+outname.c
+outname.h
+outname.o
+README
+temp.txt
+vg.log
+Comparing file list2a.txt.counts with answer
+Your output is correct
+Comparing file list2b.txt.counts with answer
+I expected to find a file called '62list2b.txt.counts' but it did not exist
+(or was not a regular file)
+Here are the files that I can find:
+62list1a.txt
+62list1a.txt.count
+62list1b.txt
+62list1b.txt.count
+62list2a.txt
+62list2a.txt.count
+62list2b.txt
+62list2b.txt.count
+62list2c.txt
+62list2c.txt.count
+62list3a.txt
+counts.c
+counts.h
+counts.o
+count_values
+count_values.stderr
+count_values.stdout
+grade.txt
+kv.c
+kv.h
+kv.o
+kvs1.txt
+kvs2.txt
+list1a.txt
+list1a.txt.ans
+list1b.txt
+list1b.txt.ans
+list2a.txt
+list2a.txt.ans
+list2b.txt
+list2b.txt.ans
+list2c.txt
+list2c.txt.ans
+main.c
+main.o
+Makefile
+outname.c
+outname.h
+outname.o
+README
+temp.txt
+vg.log
+Your output is incorrect
+Comparing file list2c.txt.counts with answer
+I expected to find a file called '62list2c.txt.counts' but it did not exist
+(or was not a regular file)
+Here are the files that I can find:
+62list1a.txt
+62list1a.txt.count
+62list1b.txt
+62list1b.txt.count
+62list2a.txt
+62list2a.txt.count
+62list2b.txt
+62list2b.txt.count
+62list2c.txt
+62list2c.txt.count
+62list3a.txt
+counts.c
+counts.h
+counts.o
+count_values
+count_values.stderr
+count_values.stdout
+grade.txt
+kv.c
+kv.h
+kv.o
+kvs1.txt
+kvs2.txt
+list1a.txt
+list1a.txt.ans
+list1b.txt
+list1b.txt.ans
+list2a.txt
+list2a.txt.ans
+list2b.txt
+list2b.txt.ans
+list2c.txt
+list2c.txt.ans
+main.c
+main.o
+Makefile
+outname.c
+outname.h
+outname.o
+README
+temp.txt
+vg.log
+Your output is incorrect
 #################################################
 testcase4:
-valgrind reported memory errors
+I expected to find a file called '62list3a.txt.counts' but it did not exist
+(or was not a regular file)
+Here are the files that I can find:
+62list1a.txt
+62list1a.txt.count
+62list1b.txt
+62list1b.txt.count
+62list2a.txt
+62list2a.txt.count
+62list2b.txt
+62list2b.txt.count
+62list2c.txt
+62list2c.txt.count
+62list3a.txt
+62list3a.txt.count
+counts.c
+counts.h
+counts.o
+count_values
+count_values.stderr
+count_values.stdout
+grade.txt
+kv.c
+kv.h
+kv.o
+kvs1.txt
+kvs2.txt
+list1a.txt
+list1a.txt.ans
+list1b.txt
+list1b.txt.ans
+list2a.txt
+list2a.txt.ans
+list2b.txt
+list2b.txt.ans
+list2c.txt
+list2c.txt.ans
+main.c
+main.o
+Makefile
+ours.txt
+outname.c
+outname.h
+outname.o
+README
+temp.txt
+vg.log
+Comparing file list3a.txt.counts with answer
+Your output is correct
+  - Valgrind was clean (no errors, no memory leaks)
+valgrind was clean
 
 Overall Grade: F
