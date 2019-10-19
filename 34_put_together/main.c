@@ -38,7 +38,7 @@ int main(int argc, char ** argv) {
 
     //compute the output file name from argv[i] (call this outName)
     char * outName = NULL;
-    if ((outName = calloc(strlen(argv[i]) + 6, sizeof(* outName))) == NULL) {
+    if ((outName = calloc(sizeof(* outName), strlen(argv[i]) + 7)) == NULL) {
         printf("Nie moge zaalokowac pamiec dla nowej nazwy pliku\n");
         exit(EXIT_FAILURE);
     }
