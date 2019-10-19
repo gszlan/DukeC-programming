@@ -23,7 +23,7 @@ counts_t * countFile(const char * filename, kvarray_t * kvPairs) {
 int main(int argc, char ** argv) {
 
  if (argc < 3) {
-     printf("Podaj przynajmniej 2 pliki\n");
+     printf("Podaj przynajmniej 2 pliki a jest %d\n",argc);
      exit(EXIT_FAILURE);
  }
  //read the key/value pairs from the file named by argv[1] (call the result kv)
