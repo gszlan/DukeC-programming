@@ -38,12 +38,12 @@ int main(int argc, char ** argv) {
 
     //compute the output file name from argv[i] (call this outName)
     char * outName = NULL;
-    if ((outName = calloc(sizeof(* outName), strlen(argv[i]) + 7)) == NULL) {
+    if ((outName = calloc(sizeof(* outName), strlen(argv[i]) + 8)) == NULL) {
         printf("Nie moge zaalokowac pamiec dla nowej nazwy pliku\n");
         exit(EXIT_FAILURE);
     }
     strncpy(outName, argv[i],strlen(argv[i]));
-    strcat(outName,".count");
+    strcat(outName,".counts");
 
     //open the file named by outName (call that f)
     FILE * f = openFile(outName, "w");
