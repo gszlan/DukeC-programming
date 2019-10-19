@@ -25,6 +25,8 @@ card_t * add_empty_card(deck_t * deck) {
 deck_t * make_deck_exclude(deck_t * excluded_cards) {
 
     deck_t * deck = malloc(sizeof(*deck));
+    deck->cards = NULL;
+    deck->n_cards = 0;
     
     for (int i = 0; i < 52; i++) {
         if (!deck_contains(excluded_cards, card_from_num(i))) {
@@ -38,6 +40,8 @@ deck_t * make_deck_exclude(deck_t * excluded_cards) {
 deck_t * build_remaining_deck(deck_t **hands, size_t n_hands) {
 
     deck_t * excluded_cards = malloc(sizeof(*excluded_cards));
+    excluded_cards->cards = NULL;
+    excluded_cards->n_cards = 0;
 
     for (int i = 0; i < n_hands; i++) {
         for (int j = 0; j < hands[i]->n_cards; j++) {
