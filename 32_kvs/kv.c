@@ -4,10 +4,10 @@
 #include "kv.h"
 
 
-FILE * openFile(const char * fname) {
+FILE * openFile(const char * fname, const char * flag) {
 
   FILE * f;  
-  if ((f = fopen(fname, "r")) == NULL) {
+  if ((f = fopen(fname, flag)) == NULL) {
       perror("Nie moge otworzycc pliku");
       exit(EXIT_FAILURE);
   }
@@ -61,7 +61,7 @@ void addPair(kvarray_t *array, kvpair_t * pair) {
 
 kvarray_t * readKVs(const char * fname) {
   
-  FILE * f = openFile(fname);
+  FILE * f = openFile(fname, "r");
   
   char *line = NULL;
   size_t len = 0;

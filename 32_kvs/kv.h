@@ -24,4 +24,8 @@ void printKVs(kvarray_t * pairs);
 
 char * lookupValue(kvarray_t * pairs, const char * key);
 
+FILE * openFile(const char * fname, const char * flag);
+
+void closeFile(FILE *f);
+
 #endif
