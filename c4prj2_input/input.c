@@ -1,0 +1,54 @@
+#include "input.h"
+#include "future.h"
+#include <stdio.h>
+#include <string.h>
+
+
+deck_t * hand_from_string(const char * str, future_cards_t * fc) {
+   
+    deck_t * hand = malloc(sizeof(*hand));
+    hand->cards = NULL;
+    hand->n_cards = 0;
+
+    for(int i = 0; i < strlen(str); i+=3) {
+        char value = str[i];
+        char suit = str[i + 1];
+        if(value == '?') {
+            add_future_card(fc, suit - '0', add_empty_card(hand));
+        } else {
+            add_card_to(hand, card_from_letters(value, suit));
+        }
+    }
+    return hand;
+}
+
+/*
+   This function reads the input from input file f (has one
+   hand per line represented with a deck_t) It allocates a
+   deck_t for each hand and place it into an array of
+   pointers to deck_ts. This function needs to tell its
+   caller how many hands it read. We could return a struct,
+   but we are going to do this a different way: it will fill
+   in *n_hands with the number of hands.
+*/
+
+deck_t ** read_input(FILE * f, size_t * n_hands, future_cards_t * fc) {
+
+    deck_t ** arr = NULL;
+    *n_hands = 0;
+
+    ssize_t nread = 0;
+    char *line = NULL;
+    size_t len = 0;
+
+    while((nread = getline(&line, &len, f)) != -1 ) {
+        if(nread < 5 * 3) {
+            fprintf(stderr, "Each hand should have at least 5 cards.\n");
+            exit(EXIT_FAILURE);
+        }
+        arr = realloc(arr, sizeof(*arr) * ++(*n_hands));
+        arr[*n_hands - 1] = hand_from_string(line, fc);
+    }
+    free(line);
+    return arr;
+}
