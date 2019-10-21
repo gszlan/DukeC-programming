@@ -2,6 +2,13 @@
 #include "deck.h"
 #include <assert.h>
 
+/*
+   This adds ptr into the future cards for the given index
+   (that is, which ?n it is). So if this is a future card
+   for ?3, then index will be 3.  ptr will point at an
+   existing placeholder card (it will point into a hand at a
+   card which was added with add_empty_card).
+*/
 
 void add_future_card(future_cards_t * fc, size_t index, card_t * ptr) {
 
@@ -11,9 +18,13 @@ void add_future_card(future_cards_t * fc, size_t index, card_t * ptr) {
             fc->decks[i].cards = NULL;
             fc->decks[i].n_cards = 0;
         }
+        fc->n_decks = index + 1;
     }
 
-    add_card_to(&fc->decks[index], *ptr); 
+    fc->decks[index].n_cards++;
+    fc->decks[index].cards = realloc(fc->decks[index].cards, sizeof(*(fc->decks[index].cards)) * fc->decks[index].n_cards); 
+    fc->decks[index].cards[fc->decks[index].n_cards - 1] = ptr;
+    //add_card_to(&(fc->decks[index]), *ptr); 
 
 }
 
