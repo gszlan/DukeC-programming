@@ -46,7 +46,8 @@ deck_t ** read_input(FILE * f, size_t * n_hands, future_cards_t * fc) {
             fprintf(stderr, "Each hand should have at least 5 cards.\n");
             exit(EXIT_FAILURE);
         }
-        arr = realloc(arr, sizeof(*arr) * ++(*n_hands));
+        (*n_hands)++;
+        arr = realloc(arr, sizeof(*arr) * (*n_hands));
         arr[*n_hands - 1] = hand_from_string(line, fc);
     }
     free(line);
