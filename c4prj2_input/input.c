@@ -10,7 +10,7 @@ deck_t * hand_from_string(const char * str, future_cards_t * fc) {
     hand->cards = NULL;
     hand->n_cards = 0;
 
-    while(*str != '\0') {
+    while(str != NULL && *str != '\0') {
         if (*str == ' ') {
             str++;
             continue;
@@ -23,10 +23,11 @@ deck_t * hand_from_string(const char * str, future_cards_t * fc) {
                 add_future_card(fc, index, add_empty_card(hand));
             } else {
                 char suit = *str;
+                str++;
                 add_card_to(hand, card_from_letters(value, suit));
             }
         }
-        str++;
+        //str++;
     }
 
     if (hand->n_cards < 5) {
