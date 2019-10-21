@@ -10,25 +10,32 @@ deck_t * hand_from_string(const char * str, future_cards_t * fc) {
     hand->cards = NULL;
     hand->n_cards = 0;
 
-    for (int i = 0; i < strlen(str); i++) {
-        if (str[i] == ' ') {
+    while(*str != '\0') {
+        if (*str == ' ') {
+            str++;
             continue;
         } else {
-            char value = str[i++];
-            char suit = str[i];
+            char value = *str;
+            str++;
             if(value == '?') {
-                add_future_card(fc, suit - '0', add_empty_card(hand));
+                int index = atoi(str);
+                str = strchr(str, ' ');
+                add_future_card(fc, index, add_empty_card(hand));
             } else {
+                char suit = *str;
                 add_card_to(hand, card_from_letters(value, suit));
             }
         }
+        str++;
     }
 
     if (hand->n_cards < 5) {
         fprintf(stderr, "Each hand should have at least 5 cards.\n");
         exit(EXIT_FAILURE);
     }
+
     return hand;
+
 }
 
 /*
