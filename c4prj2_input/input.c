@@ -10,14 +10,23 @@ deck_t * hand_from_string(const char * str, future_cards_t * fc) {
     hand->cards = NULL;
     hand->n_cards = 0;
 
-    for(int i = 0; i < strlen(str); i+=3) {
-        char value = str[i];
-        char suit = str[i + 1];
-        if(value == '?') {
-            add_future_card(fc, suit - '0', add_empty_card(hand));
+    for (int i = 0; i < strlen(str); i++) {
+        if (str[i] == ' ') {
+            continue;
         } else {
-            add_card_to(hand, card_from_letters(value, suit));
+            char value = str[i++];
+            char suit = str[i];
+            if(value == '?') {
+                add_future_card(fc, suit - '0', add_empty_card(hand));
+            } else {
+                add_card_to(hand, card_from_letters(value, suit));
+            }
         }
+    }
+
+    if (hand->n_cards < 5) {
+        fprintf(stderr, "Each hand should have at least 5 cards.\n");
+        exit(EXIT_FAILURE);
     }
     return hand;
 }
@@ -42,10 +51,7 @@ deck_t ** read_input(FILE * f, size_t * n_hands, future_cards_t * fc) {
     size_t len = 0;
 
     while((nread = getline(&line, &len, f)) != -1 ) {
-        if(nread < 5 * 3) {
-            fprintf(stderr, "Each hand should have at least 5 cards.\n");
-            exit(EXIT_FAILURE);
-        }
+        line[nread - 1] = '\0';
         (*n_hands)++;
         arr = realloc(arr, sizeof(*arr) * (*n_hands));
         arr[*n_hands - 1] = hand_from_string(line, fc);
