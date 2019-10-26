@@ -110,7 +110,7 @@ int is_n_length_straight_at(deck_t * hand, size_t index, suit_t fs, int n) {
   unsigned current_value = hand->cards[index]->value;
   index++;
 
-  if(suit_found) {
+  if(suit_found || fs == NUM_SUITS) {
       straight_found++;
       suit_found = 0;
   } else return 0; 
@@ -120,6 +120,9 @@ int is_n_length_straight_at(deck_t * hand, size_t index, suit_t fs, int n) {
   for (; index < hand_size && straight_found < n; index++) {
     previous_value = current_value;
     current_value = hand->cards[index]->value;
+    // is suit not matched previously and now we have different card,
+    // staight is no longer possible
+    if (current_value != previous_value && !suit_found && fs != NUM_SUITS) return 0;
     if (!suit_found)
        suit_found = is_suit_matched(*(hand->cards[index]), fs);
     // if value difference is greater than 1, no straight for sure
@@ -127,13 +130,10 @@ int is_n_length_straight_at(deck_t * hand, size_t index, suit_t fs, int n) {
     // if value is the same and looking for any suit, we can continue as
     // such value was already counted for straight
     if (current_value == previous_value) {
-        if (fs == NUM_SUITS)
-            continue;
-        else if (!suit_found)
-            continue;
+        continue;
     }
  
-    if(suit_found) {
+    if(suit_found || fs == NUM_SUITS) {
         straight_found++;
         suit_found = 0;
     }
@@ -192,6 +192,13 @@ hand_eval_t build_hand_from_match(deck_t * hand,
       
   return ans;
 }
+
+/* Compares hand1 and hands2 and returns:
+                 0 - both hands tie
+   negative number - hands2 wins
+   positive number - hands1 wins
+*/
+
 
 
 int compare_hands(deck_t * hand1, deck_t * hand2) {
